@@ -420,18 +420,22 @@ If your Health total reaches zero, your character dies and the adventure ends.
 ## Stress
 
 Upon accumulating 10 total Stress, your hero will be *tested* and gain a random *Stress effect*:
-1.  Heal 4 Stress, ignore next instance of Stress.
-2.  Heal 2 Stress, gain 1 Resistance.
-3.  Heal 2 Health, gain 1 Phantasmal.
-4.  You must play a Skill card each turn if you are able to. If unable, lose three Health.
-5.  Channel three random mana from hand. If mana is not available, remove two Health for each mana deficit.
-6.  Scorch three random Rune tiles and double cast speed for next turn.
-7.  Flood two random Rune tiles and channel three Lightning mana.
-8.  Shock two random Rune tiles and channel three Ice mana.
-9.  Warp two random Rune tiles.
-10. Exhaust your next Skill card.
-11. Gain a random Curse.
-12. Your next Spell will target a random ally instead. If the Spell Misfires, then hit all allies.
+1.  Heal 4 Stress.
+2.  Heal 2 Health, gain 1 Phantasmal.
+3.  Gain 1 Vulnerable.
+4.  Channel three Mana from hand. If Mana is not available, remove two Health for each  Mana deficit.
+5.  Scorch three random Rune tiles and double cast speed for next turn.
+6.  Flood two random Rune tiles and channel 2 Lightning mana.
+7.  Shock two random Rune tiles and channel 2 Ice mana.
+8.  Warp two random Rune tiles.
+9.  Exhaust your next Skill card.
+10. Gain one Curse.
+
+If playing with 2 players, roll a **D12** instead, and add the following possible effects:
+11. Your next Spell will target a random ally instead. If the Spell Misfires, then hit all allies.
+12. Your next damaging Skill will target a random ally instead. If the Skill targets all or multiple enemies, target all allies instead.
+
+If a Stress effect that is already active is rolled, take the next higher available effect. Note that effect 10 (Gain one Curse) will always count as available.
 
 Stress effects that affect the Rune board will re-trigger every combat until Stress is reduced to 2 or lower.
 
