@@ -1,0 +1,1 @@
+[Mages and Manifolds](https://github.com/DesyncTheThird/Mages-and-Manifolds) © 2025 by [Kit Liu](https://github.com/DesyncTheThird) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1)
