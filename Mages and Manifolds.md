@@ -927,7 +927,7 @@ Cost:
 
 ### The Rising Sun
 "The sun always rises."
-- At the end of your next turn, deal 16 Fire Damage to all enemies.
+- At the end of your next turn, deal 16 Fire damage to all enemies.
 - Skip your next turn.
 
 Cost:
@@ -947,7 +947,7 @@ Cost:
 
 ### Inferno
 "Spare nothing in your fury."
-- Deal 3 Fire Damage to all enemies.
+- Deal 3 Fire damage to all enemies.
 - Repeat effect 2 additional times.
 
 Cost:
@@ -1246,7 +1246,7 @@ Cost:
 
 ### Firestorm
 "Only ashes will remain."
-Deal 4 Fire Damage to all enemies.
+Deal 4 Fire damage to all enemies.
 - Channel 2 Fire Mana.
 
 Cost:
@@ -1335,7 +1335,7 @@ Cost:
 
 ### Frost Nova
 "A sudden pulse of biting cold washes forth, stopping even the most ferocious advances."
-- Deal 6 Ice Damage to all enemies.
+- Deal 6 Ice damage to all enemies.
 - Reduce enemy Cast Speed by 2 this turn.
 
 Cost:
@@ -1530,20 +1530,20 @@ Cost:
 
 <!-- Fire -->
 ### Magic Missile
-"The first spell a young mage learns. A simple yet devastating conjuration."
-- Deal 3 Fire damage.
-- If cast using Fire mana, deal 3 Fire damage.
+"The first spell a young mage learns."
+- Deal 3 Fire damage to one enemy.
+- If cast using Fire mana, deal 3 Fire damage to all enemies.
 
 Cost:
 - 2 Generic Mana
 
 ### Combust
 "A simple yet devastating conjuration."
-- Deal 3 Fire Damage to all enemies.
+- Deal 3 Fire damage to one enemy.
 - Scorch your current tile.
 
 Cost:
-- 3 Generic Mana
+- 1 Fire Mana
 
 ### Ignite
 "A wildfire is started by a single spark."
@@ -1555,7 +1555,7 @@ Cost:
 
 ### Fireball
 "An iconic show of explosive force."
-- Deal 4 Fire Damage to one enemy.
+- Deal 4 Fire damage to one enemy.
 - If your Spell Pointer is adjacent to the enemy Spell Pointer, deal 4 Fire damage to all enemies.
 
 Cost:
@@ -1600,7 +1600,7 @@ Cost:
 - 2 Ice Mana
 
 ### Repair
-"Even the smallest crack can grow into ruin. But with care, even the broken can endure."
+"The body will endure."
 - Heal 2 Health.
 - Remove an elemental Hazard from the current tile.
 
@@ -1610,14 +1610,14 @@ Cost:
 
 ### Icicle Burst
 "A vicious volley, sharp and precise."
-- Deal 2 Ice Damage to one enemy.
+- Deal 1 Ice damage to all enemies.
 
 Cost:
 - 1 Ice Mana
 
 ### Aqua Bolt
 "Rippling power surges forth."
-- Deal 1 Ice Damage to all enemies.
+- Deal 2 Ice damage to one enemy.
 
 Cost:
 - 1 Ice Mana
@@ -1643,8 +1643,8 @@ Cost:
 - 1 Generic Mana
 
 ### Arc
-"A shocking chain of electricity"
-- Deal 2 Lightning Damage to an enemy.
+"A shocking chain of electricity."
+- Deal 2 Lightning damage to an enemy.
 - For each Lightning Mana used to activate this Skill, hit one additional enemy.
 - If only Lightning Mana is used, Shock the tile under the enemy Spell Pointer.
 
@@ -1663,7 +1663,7 @@ Cost:
 
 ### Attune
 "Harmony with the storm."
-- Draw 1 Mana card.
+- Draw 2 Mana cards.
 
 Cost:
 - None
@@ -1671,14 +1671,14 @@ Cost:
 ### Ball Lightning
 "A sphere of raw electricity dances in the air, a transient containment of power."
 - Shock a tile of your choice.
-- Channel 1 Ice mana.
+- Channel 1 Lightning mana.
 
 Cost:
 - 3 Lightning Mana
 
 ### Unleash
 "Power without restraint."
-- Deal **3\*X** Lightning Damage to one enemy.
+- Deal **3\*X** Lightning damage to one enemy.
 - If the enemy is on a Flooded tile, ignore Lightning Resistance.
 
 Cost:
@@ -1727,7 +1727,7 @@ Cost:
 
 ### Constriction
 "Strength suffocates as it protects."
-- Enemy is Resistant to all damage this turn.
+- All enemies gain 1 Resistance.
 - Reduce enemy Cast Speed by 2 this turn.
 
 Cost:
@@ -1744,7 +1744,7 @@ Cost:
 
 ### Zeal
 "Devotion becomes strength."
-- Gain 1 Ward.
+- Gain 2 Ward.
 - Channel 1 Fire Mana.
 
 Cost:
@@ -1787,14 +1787,14 @@ Cost:
 ## Starting Cards (x15)
 
 ### Flame (x2)
-- Deal 4 Fire Damage to one enemy.
+- Deal 4 Fire damage to one enemy.
 
 Cost:
 - 1 Fire Mana.
 - 1 Generic Mana.
 
 ### Spark (x2)
-- Deal 4 Lightning Damage to one enemy.
+- Deal 4 Lightning damage to one enemy.
 
 Cost:
 - 1 Lightning Mana.
@@ -3301,7 +3301,7 @@ Actions:
 - Gain 4 Block.
 - Gain 2 Block.
 - Nothing.
-- Lose 8 Health and deal 20 Fire Damage.
+- Lose 8 Health and deal 20 Fire damage.
 
 ### Royal Slime
 |        |             |                 |
