@@ -48,10 +48,7 @@ Cast Speed:
 Draw:
 - 3
 
-Mana Hand Size:
-- 7
-
-Skill Hand Size:
+Hand Size:
 - 7
 
 Maximum Potions:
@@ -859,7 +856,6 @@ Cost:
 - Whenever you gain Block, lose an equal amount of Ward.
 - Cannot be played.
 
-
 ### Brittle Resolve
 "The cold is not merely an absence of warmth but a relentless presence that demands stillness."
 - While this card is in hand, take 2 Ice damage every time a Skill is played.
@@ -1184,7 +1180,7 @@ Cost:
 "Each gear turns in perfect harmony, a machine of endless precision and relentless purpose."
 - Gain 1 Cast Speed for the rest of combat.
 - Gain 1 Draw per turn for the rest of combat.
-- Misfires cause 4 additional stress.
+- Misfires cause 4 additional stress for the rest of combat..
 - Exhaust.
 
 Cost:
@@ -1477,26 +1473,27 @@ Cost:
 - 1 Fire Mana
 - 1 Earth Mana
 
-### Astral Warp
+### Astral Rift
 "Space bends to your will."
 - Gain an Epsilon transition.
+- Channel 1 Void Mana.
 
 Cost:
-- 2 Generic Mana
+- 3 Generic Mana
 
 ### Bifurcating Strike
 "Divide and conquer."
 - Your next single-target Skill targets two enemies.
 
 Cost:
-- 3 Generic Mana
+- 2 Generic Mana
 
 ### Arcane Battery
 "Overflowing with latent energy."
-- Channel 2 Mana of the same elemental type.
+- Channel 2 Void Mana
 
 Cost:
-- 2 Generic Mana
+- 2 Lightning Mana
 
 ### Surge
 "The tides of power rise swiftly and without warning."
@@ -1559,10 +1556,10 @@ Cost:
 ### Fireball
 "An iconic show of explosive force."
 - Deal 4 Fire Damage to one enemy.
-- If cast using Fire mana, deal 2 Fire Damage to all enemies.
+- If your Spell Pointer is adjacent to the enemy Spell Pointer, deal 4 Fire damage to all enemies.
 
 Cost:
-- 3 Generic Mana
+- 3 Fire Mana
 
 ### Eruption
 "Molten energy bursts forth."
@@ -1728,7 +1725,6 @@ Cost:
 Cost:
 - 2 Earth Mana
 
-
 ### Constriction
 "Strength suffocates as it protects."
 - Enemy is Resistant to all damage this turn.
@@ -1754,7 +1750,6 @@ Cost:
 Cost:
 - 1 Generic Mana
 
-
 ### Inertia
 "There is no force without motion."
 - The Spell Pointer continues in the same direction for one more tile, regardless of available transitions.
@@ -1764,10 +1759,10 @@ Cost:
 
 ### Rift
 "Tear through reality itself."
-- Warp one tile adjacent to your Spell Pointer.
+- Channel 1 Void Mana.
 
 Cost:
-- 3 Generic Mana
+- 2 Generic Mana
 
 ### Dark Heal
 "The shadows offer solace, but at a price. Their whispers linger long after the wounds fade."
@@ -1816,7 +1811,6 @@ Cost:
 
 Cost:
 - 1 Ice Mana
-
 
 ### Prepare (x2)
 - Draw 2 cards.
@@ -3505,7 +3499,7 @@ Actions:
 ### Vial of Snake Oil
 "It is often the case that wanting is more desirable than having."
 - Draw four additional cards at the beginning of combat.
-- Lost 1 Health every time you play a Skill past.
+- Lose 1 Health every time you play a Skill.
 
 ### Blighted Tome
 "The dusty pages seem alive with a sinister energy."
@@ -3549,9 +3543,9 @@ Actions:
 "Victory is decided before the battle even begins."
 - At the start of combat, view the top 5 cards of your Combat deck.
 
-### Molten Charm
+### Molten Crown
 "Wreathed in flames, your foes will burn in your glorious presence."
-- Every time you channel a Fire mana, take one Fire damage, and immediately deal one Fire damage to all enemies.
+- Every time you channel a Fire mana, take two Fire damage, and immediately deal one Fire damage to all enemies.
 
 ### Pocket Sundial
 "A shadow looms on its face, unerring, regardless of the surrounding light."
@@ -3567,7 +3561,7 @@ Actions:
 
 ### Ornate Medallion
 "It bears a cryptic inscription you can't quite read."
-- Whenever you channel mana of three different types in a single turn, gain 1 Gold.
+- Whenever you channel Mana of three different types in a single turn, gain 1 Gold.
 
 ### Petrified Skull
 "The weight of ages has turned it to stone."
@@ -3589,10 +3583,10 @@ Actions:
 
 ### The Overture
 "Every masterpiece begins with a single note."
-- Heal
+- 
 
 ### Entropic Sigil
-"Chaos is but the path of least resistance."
+"The path of least resistance."
 - Start each combat with two Void mana channelled.
 
 ### Roku's Basilisk
@@ -3654,8 +3648,7 @@ Actions:
 
 
 
-## Boss/Elite Relics
-
+## Boss/Elite Relics (x10)
 
 ### Infinite Loop
 "The end is never the end is never the end is never the end is..."
@@ -3702,7 +3695,6 @@ Actions:
 "It is said to possess powers which mere mortals can scarcely comprehend, let alone utilize."
 - At the beginning of combat, select an element. All Hazards of that element are quotiented together.
 - At the end of your turn, you may select a new element. This ability has a cooldown of 2 turns.
-
 
 ### The Red Book
 "The cursed grimoire seeks not to be understood, but obeyed."
