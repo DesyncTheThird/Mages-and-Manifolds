@@ -254,7 +254,7 @@ Roll a **D20** three times, and add the *Accepting* marker to the indicated tile
 ### Setup
 
 - Remove leftover block from the previous turn.
-- For each enemy, roll a D6 to determine [enemy actions](#enemy-actions) (if applicable).
+- For each enemy, roll a D6 to determine [enemy Intentions](#enemy-intentions) (if applicable).
 
 
 ### Draw
@@ -323,13 +323,13 @@ If a enemy card has requirements that may be met mid-cast, track them with a cou
 
 ### Enemy Actions
 
-After all Spells resolve and Skills have been played, enemies finally perform the listed action(s) on their card. (Defensive actions may be triggered earlier.)
+After all Spells resolve and Skills have been played, enemies finally perform the listed *Intention* action(s) on their card. (Defensive actions may be triggered earlier.)
 
 The leftmost enemy acts first, before proceeding rightwards.
 
-- Otherwise, the enemy takes the action corresponding to the number that the [dice rolled at the start of the turn](#setup-2).
 - If an action does not have a listed number, it is activated every turn.
 - If several unnumbered actions are listed, cycle through them each turn.
+- Otherwise, the enemy takes the action corresponding to the number that the [dice rolled at the start of the turn](#setup-2).
 
 [Status cards](#status-effects) activate at the very end of the turn.
 
@@ -368,7 +368,7 @@ Enemies and players take **half** damage (rounded up) from Resisted damage types
 
 [Resistance](#resistance) and [Vulnerability tokens](#vulnerable) apply the associated effect for **all** damage types.
 
-If you are Vulnerable and Resistant to the same damage type, they cancel out and no damage multipliers are applied.
+If you are Vulnerable and Resistant to the same damage type, they cancel out and no damage multipliers are applied. Having multiple sources of Vulnerability and Resistance do not have additional effect, e.g. if you are on a [shattered](#shattered-earth) tile and have 5 Resistance tokens, the two effects simply cancel out.
 
 ## Void Mana
 
@@ -897,7 +897,7 @@ Cost:
 
 ### Pillar of Light
 "You will stand out amongst the rest, a shining beacon of hope."
-- Deal 8 Fire damage to all enemies.
+- Deal 7 Fire damage to all enemies.
 - Channel 2 Fire Mana and 1 Void Mana.
 - Gain 3 Stress.
 
@@ -906,7 +906,7 @@ Cost:
 
 ### Fallen Star
 "A fragment of the heavens descends, heralded by a piercing song of brilliance and ruin."
-- Deal 12 Fire damage to one enemy.
+- Deal 10 Fire damage to one enemy.
 - Scorch and Shatter the tile under the enemy Spell Pointer.
 - Lose all Ward.
 - Lose 8 Health.
@@ -927,7 +927,7 @@ Cost:
 
 ### The Rising Sun
 "The sun always rises."
-- At the end of your next turn, deal 16 Fire damage to all enemies.
+- At the end of your next turn, deal 12 Fire damage to all enemies.
 - Skip your next turn.
 
 Cost:
@@ -1073,7 +1073,8 @@ Cost:
 - Exhaust.
 
 Cost:
-- 4 Generic Mana
+- 3 Lightning Mana
+- 1 Generic Mana
 
 <!-- Earth -->
 
@@ -1099,7 +1100,7 @@ Cost:
 ### Entrench
 "The earth rises in your defense, a wall against the tides of chaos. It will hold, as long as you do."
 - Gain 30 Block.
-- Skip your next turn.
+- Enemies take their Intention actions twice.
 - Exhaust.
 
 Cost:
@@ -1141,7 +1142,7 @@ Cost:
 ### Eternity
 "Time halts at your command, freezing the battlefield in an eternal moment of stillness."
 - View the top 5 cards of your Combat deck.
-- Enemies skip their next turn.
+- Enemies do not perform Intention actions this turn.
 - Exhaust.
 
 Cost:
@@ -1209,6 +1210,7 @@ Cost:
 "No retreat."
 - Accumulate 5 Mana.
 - Gain 3 Vulnerable.
+- Set all enemy Intentions to 6.
 - Exhaust
 
 Cost:
@@ -1246,7 +1248,7 @@ Cost:
 
 ### Firestorm
 "Only ashes will remain."
-Deal 4 Fire damage to all enemies.
+- Deal 4 Fire damage to all enemies.
 - Channel 2 Fire Mana.
 
 Cost:
@@ -1318,6 +1320,7 @@ Cost:
 ### Desecrate
 "Defile the sacred and unleash the unspeakable."
 - Deal 4 Void damage.
+- Reduce one enemy Intention to 1.
 - Gain 2 Stress.
 
 Cost:
@@ -1407,6 +1410,7 @@ Cost:
 ### Shockwave
 "A tremor that rattles the heart and crushes the spirit."
 - Deal 5 Earth damage to all enemies.
+- Decrease one enemy Intention by up to 2.
 
 Cost:
 - 2 Earth Mana
@@ -1464,12 +1468,19 @@ Cost:
 Cost:
 - 2 Generic Mana
 
-### Vengeance
-"Every injury is a debt to be repaid."
-- Increase or decrease one enemy intention by up to 2.
+### Sidestep
+"Wait, then strike."
+- Increase or decrease one enemy Intention by up to 2.
 
 Cost:
-- 1 Earth Mana
+- 1 Generic Mana
+
+### Misdirection
+"A well-placed stumble can be just as effective as a blade."
+- Swap two enemy Intentions.
+
+Cost:
+- 1 Generic Mana
 
 ### Astral Rift
 "Space bends to your will."
@@ -1500,14 +1511,6 @@ Cost:
 
 Cost:
 - 4 Generic Mana
-
-### Bladestorm
-"A tempest of steel, cutting down all in its path."
-- Channel 1 Earth mana.
-- If attacked this turn, deal 2 Earth damage to all enemies.
-
-Cost:
-- 1 Generic Mana
 
 ### Beserk
 "Abandon restraint and unleash chaos."
@@ -1616,6 +1619,7 @@ Cost:
 ### Aqua Bolt
 "Rippling power surges forth."
 - Deal 2 Ice damage to one enemy.
+- Decrease one enemy Intention by up to 2.
 
 Cost:
 - 1 Ice Mana
@@ -1701,6 +1705,7 @@ Cost:
 
 ### Deflect
 "Redirect the force."
+- Decrease one enemy Intention by up to 2.
 - Gain 12 Block.
 - Deal 2 Earth damage to all enemies.
 
@@ -1742,7 +1747,7 @@ Cost:
 
 ### Redirection
 "Momentum is its own kind of magic"
-- Reroll one enemy intention.
+- Reroll one enemy Intention.
 
 Cost:
 - 1 Generic Mana
@@ -1761,10 +1766,9 @@ Cost:
 Cost:
 - 2 Generic Mana
 
-### Dark Heal
-"The shadows offer solace, but at a price. Their whispers linger long after the wounds fade."
-- Heal 5 Health.
-- Gain 2 Stress.
+### Anticipate
+"Know your enemy, and you've already won half the battle."
+- Decrease one enemy Intention by up to 2.
 
 Cost:
 - 1 Generic Mana
