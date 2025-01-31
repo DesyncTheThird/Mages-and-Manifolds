@@ -1040,7 +1040,7 @@ Cost:
 ### Zephyr
 "Lightning courses through the air, swift and unpredictable, as you channel its speed into your actions."
 - Draw 3 Mana cards.
-- Gain 3 Cast Speed for this turn.
+- Accumulate 3 Mana.
 
 Cost:
 - 2 Lightning Mana
@@ -1059,7 +1059,7 @@ Cost:
 
 ### Transience
 "You are but a conduit for the storm’s energy, letting it flow freely before it burns you out."
-- Gain 2 Cast Speed for this turn.
+- Accumulate 2 Mana.
 - Discard 2 Cards.
 - Draw 4 Cards.
 
@@ -1158,7 +1158,7 @@ Cost:
 
 ### Last Breath
 "A fleeting moment of defiance before the end."
-- Gain 4 Cast Speed for this turn.
+- Accumulate 4 Mana.
 - Lose all Block.
 - Lose all Ward.
 - Exhaust.
@@ -1207,7 +1207,7 @@ Cost:
 
 ### Relentless
 "No retreat."
-- Gain 5 Cast Speed for this turn.
+- Accumulate 5 Mana.
 - Gain 3 Vulnerable.
 - Exhaust
 
@@ -1353,7 +1353,7 @@ Cost:
 
 ### Finesse
 "With a delicate touch and a sharp mind, even chaos can be guided into order"
-- Gain 2 Cast Speed this turn.
+- Accumulate 2 Mana.
 - Draw 2 Cards.
 - Discard 2 Cards.
 
@@ -1424,7 +1424,7 @@ Cost:
 ### Unstoppable
 "No force can halt a mountain in motion."
 - Gain 2 Ward.
-- Gain 1 Cast Speed for this turn.
+- Accumulate 1 Mana.
 - Discard 1 Card.
 
 Cost:
@@ -1466,11 +1466,9 @@ Cost:
 
 ### Vengeance
 "Every injury is a debt to be repaid."
-- Gain 2 Ward.
-- If you are attacked this turn, deal 2 Fire damage to all enemies.
+- Increase or decrease one enemy intention by up to 2.
 
 Cost:
-- 1 Fire Mana
 - 1 Earth Mana
 
 ### Astral Rift
@@ -1497,7 +1495,7 @@ Cost:
 
 ### Surge
 "The tides of power rise swiftly and without warning."
-- Gain 2 Cast Speed this turn.
+- Accumulate 2 Mana.
 - The first time a Spell would Misfire this turn due to misnavigation, instantly use a Delta transition.
 
 Cost:
@@ -1513,7 +1511,7 @@ Cost:
 
 ### Beserk
 "Abandon restraint and unleash chaos."
-- Gain 2 Cast Speed this turn.
+- Accumulate 2 Mana.
 - Lose 2 Health.
 - Gain 2 Stress.
 
@@ -1742,10 +1740,9 @@ Cost:
 
 - 1 Generic Mana
 
-### Zeal
-"Devotion becomes strength."
-- Gain 2 Ward.
-- Channel 1 Fire Mana.
+### Redirection
+"Momentum is its own kind of magic"
+- Reroll one enemy intention.
 
 Cost:
 - 1 Generic Mana
@@ -1774,7 +1771,7 @@ Cost:
 
 ### Enrage
 "Fury fuels your actions."
-- Gain 2 Cast Speed this turn.
+- Accumulate 2 Mana.
 
 Cost:
 - 2 Generic Mana
@@ -1820,7 +1817,7 @@ Cost:
 - 1 Generic Mana
 
 ### Focus (x1)
-- Gain 1 Cast Speed for this turn.
+- Accumulate 1 Mana.
 
 Cost:
 - 1 Generic Mana
@@ -3611,7 +3608,7 @@ Actions:
 
 ### The Hanged Man
 "A perspective of sacrifice unveils untold wisdom."
-- Whenever you take damage during combat, channel one Mana of the primary damage type of the damage source and gain one Cast Speed for one turn.
+- Whenever you take damage during combat, channel one Mana of the primary damage type of the damage source and Accumulate 1 Mana.
 - At the start of combat, draw 1 additional card for each 10 Health missing.
 
 ### Lightning Coil
