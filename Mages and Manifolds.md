@@ -669,7 +669,7 @@ Cost:
 - 1 Fire Mana
 
 ### Poisoned
-- Automatically played when drawn
+- Automatically played when drawn.
 - Lose 2 Health.
 - Gain 1 Stress.
 - Exhaust.
@@ -2642,8 +2642,8 @@ Decay:
 
 #### Skeleton Mage (Fire)
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     | Fire        | Earth           |
 |        |             | Ice             |
 
@@ -2654,8 +2654,8 @@ Actions:
 
 #### Skeleton Mage (Lightning)
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     | Lightning   | Earth           |
 
 Actions:
@@ -2665,8 +2665,8 @@ Actions:
 
 #### Skeleton Mage (Ice)
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     | Ice         | Earth           |
 |        |             | Fire            |
 
@@ -2694,8 +2694,8 @@ Decay Effect:
 
 #### Skeleton Guard
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 15     | Earth       | Lightning       |
 
 Actions:
@@ -2705,8 +2705,8 @@ Actions:
 
 #### Skeleton Knight
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 15     | Earth       | Lightning       |
 
 Actions:
@@ -2715,8 +2715,8 @@ Actions:
 
 #### Skeleton Archer
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 12     |             | Earth           |
 
 Actions:
@@ -2742,8 +2742,8 @@ Decay Effect:
 
 #### Slime
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     | Ice         | Fire            |
 
 Actions:
@@ -2752,8 +2752,8 @@ Actions:
 
 #### Slime
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     | Ice         | Fire            |
 
 Actions:
@@ -2762,8 +2762,8 @@ Actions:
 
 #### Large Slime
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 15     | Ice         | Fire            |
 
 Actions:
@@ -2788,8 +2788,8 @@ When killing any slime, heal all remaining slimes 5 Health.
 
 #### Slime
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     | Ice         | Fire            |
 
 Actions:
@@ -2798,8 +2798,8 @@ Actions:
 
 #### Slime
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     | Ice         | Fire            |
 
 Actions:
@@ -2808,8 +2808,8 @@ Actions:
 
 #### Dryad
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 20     | Ice         | Fire            |
 
 Loses Ice Resistance if your Spell contains two consective Fire Mana.
@@ -2843,8 +2843,8 @@ Decay Effect:
 
 ### Hooded Figure
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 20     |             | All             |
 
 Actions:
@@ -2853,8 +2853,8 @@ Actions:
 
 ### Dark Cultist
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 20     |             | All             |
 
 Actions:
@@ -2863,8 +2863,8 @@ Actions:
 
 ### Corrupted Seer
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 30     |             | All             |
 
 - 1-2: Deal 1 Void damage.
@@ -2892,8 +2892,8 @@ Decay Effect:
 
 ### Wraith
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 4      | All         |                 |
 
 Permanent Phantasmal.
@@ -2904,8 +2904,8 @@ Actions:
 
 ### Plague Ghoul
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 20     |             | Fire            |
 
 Actions:
@@ -2914,8 +2914,8 @@ Actions:
 
 ### Dire Wolf
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     |             | Lightning       |
 
 Actions:
@@ -2945,8 +2945,8 @@ Decay Effect:
 
 #### Bandit Marauder
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 20     | Earth       | Lightning       |
 
 Actions:
@@ -2956,8 +2956,8 @@ Actions:
 
 #### Bandit Mage
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 12     |             | Ice             |
 
 Actions:
@@ -2984,8 +2984,8 @@ Decay Effect:
 
 #### Skeleton Gladiator
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 12     |             | Earth           |
 
 Actions:
@@ -2995,8 +2995,8 @@ Actions:
 
 #### Skeleton Duelist
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 12     |             | Earth           |
 
 Actions:
@@ -3006,8 +3006,8 @@ Actions:
 
 #### Necromancer
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 20     |             | Ice             |
 
 Actions:
@@ -3034,8 +3034,8 @@ Decay Effect:
 
 #### Skeleton Knight
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 15     | Earth       | Lightning       |
 
 Actions:
@@ -3044,8 +3044,8 @@ Actions:
 
 #### Shadow Duelist
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     |             | Ice             |
 
 Actions:
@@ -3054,8 +3054,8 @@ Actions:
 
 #### Lich
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     |             | Fire            |
 
 Actions:
@@ -3096,19 +3096,19 @@ Decay Effect:
 
 #### Infested Wolf
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 12     |             | Fire            |
 
 Actions:
 - 1-2: Deal 4 Earth damage.
 - 3-5: Gain 4 Block.
-- 6: Shuffle 1 Poisoned into Combat deck.
+- 6: Shuffle 1 Poison into Combat deck.
 
 #### Infested Bandit
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 18     |             | Lightning       |
 
 Actions:
@@ -3117,12 +3117,12 @@ Actions:
 
 #### Fungal Mass
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 40     |             | Fire            |
 
 Actions:
-- 1-4: Shuffle 1 Poisoned into Combat deck.
+- 1-4: Shuffle 1 Poison into Combat deck.
 - 5: Shuffle 1 Sapped into Combat deck.
 - 6: Gain 1 Resistance.
 
@@ -3145,12 +3145,14 @@ Decay Effect:
 
 
 
+
+
 ### Echoing Catacombs
 
 #### Shattered Bone Construct
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 30     |             | Lightning       |
 
 Actions:
@@ -3159,8 +3161,8 @@ Actions:
 
 #### Amalgamated Ruins
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 60     |             | Lightning       |
 
 Actions:
@@ -3168,8 +3170,8 @@ Actions:
 
 #### Stasis Automaton
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     |             | All             |
 
 Cannot be damaged until Amalgamated Ruins is destroyed.
@@ -3203,33 +3205,40 @@ Decay Effect:
 
 #### Rune Golem
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 24     | Earth       | Lightning       |
 
+Actions:
+- 1-4: None.
+- 5-6: Shuffle a Sapped into Combat deck.
 
 #### Voidbringer
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     |             | Earth           |
 
+Actions:
+- 1-4: None.
+- 5: Shuffle a Burn into Combat deck.
+- 6: Shuffle a Poison into Combat deck.
 
 #### Beacon of Madness
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 40     |             | Ice             |
 |        |             | Fire            |
 
-
-- 5: Shock a random tile
-- 6: Flood a random tile
+Actions:
+- 1-3: None.
+- 4: Shuffle a Sapped into Combat deck.
+- 5: Shock a random tile.
+- 6: Flood a random tile.
 
 
 #### Encounter Modifiers
-
-At the end of your turn, gain 1 Vulnerable if you have a Void Mana channelled.
 
 Decay:
 - 16 turns
@@ -3240,24 +3249,102 @@ Decay Effect:
 
 
 
+
+
+
 ### Eldritch Convocation
 
 
 #### Eldritch Remnant
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 16     | Lightning   | Fire            |
+
+Actions:
+- 1-2: Nothing.
+- 3-4: Increase The Harbinger's Intention by 1.
+- 5-6: Increase The Harbinger's Intention by 2.
 
 #### Eldritch Echo
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 16     | Ice         | Earth           |
+
+Actions:
+- Performs the same action as The Harbinger.
 
 #### The Harbinger
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 40     |             |                 |
+
+Actions:
+- 1-2: None.
+- 3-4: Deal 3 Void Damage.
+- 5-6: Deal 6 Void Damage.
+
+
+#### Encounter Modifiers
+
+Shuffle a Bleeding into Combat deck whenever you take damage from The Harbinger.
+
+Decay:
+- 16 turns
+
+Decay Effect:
+- None.
 
 
 
 
 
-### 
+
+
+
+
+### The Twins
 
 #### Aspect of Decay
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 40     | Lightning   | Ice             |
+|        | Earth       | Fire            |
+
+
+Actions:
+- 1-2: All enemies heal 4 Health.
+- 3-4: All enemies gain 8 Block.
+- 5-6: Deal 4 Ice damage.
+
 
 #### Aspect of Apathy
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 40     | Ice         | Earth           |
+|        | Fire        | Lightning       |
+
+Actions:
+- 1-2: Deal 4 Fire damage.
+- 3-4: Deal 7 Fire damage.
+- 5-6: Apply 1 Vulnerable.
+
+#### Encounter Modifiers
+
+Once one Aspect is defeated, the remaining Aspect gains 2 Resistance.
+
+Whenever the enemy successfully resolves a Spell, Shatter one tile.
+
+
+Decay:
+- 16 turns
+
+Decay Effect:
+- Shock one tile every turn.
 
 
 
@@ -3265,10 +3352,49 @@ Decay Effect:
 
 
 
-### 
 
+
+
+### The Repository Archives
+
+#### Elder Guardian
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 20     | Fire        | Ice            |
+
+Actions:
+- 1-4: Shuffle a Burn into Combat deck.
+- 5-6: Force player to draw two Skill Cards.
+
+#### Elder Guardian
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 20     | Earth       | Lightning       |
+
+Actions:
+- 1-4: Shuffle a Bleeding into Combat deck.
+- 5-6: Force player to draw two Skill Cards.
 
 #### The Collector
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 40     |             | Earth           |
+
+- 1-3: Force player to draw two Skill Cards.
+- 4-6: Deal **X** Ice damage, where **X** is the number of cards in the player's hand.
+
+#### Encounter Modifiers
+
+Choose one relic to disable for this combat.
+
+Decay:
+- 16 turns
+
+Decay Effect:
+- Disable an additional relic.
 
 
 
@@ -3278,14 +3404,13 @@ Decay Effect:
 
 
 
-### Sovereign Slime
 
-
+### The Sovereign Slime
 
 #### Large Slime
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 15     | Ice         | Fire            |
 
 Actions:
@@ -3294,8 +3419,8 @@ Actions:
 
 #### Blast Slime
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 10     | Fire        | Ice             |
 
 Actions:
@@ -3307,14 +3432,26 @@ Actions:
 
 ### Royal Slime
 |        |             |                 |
-| ------ | ----------- | --------------- |
 | Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
 | 40     | Ice         | Fire            |
 
 Actions:
-- 1-4: Deal 2 Ice damage.
-- 3
-- 5-6: Heal 6 Health and gain 4 Blockr.
+- 1-2: Heal Blast Slime 4 Health.
+- 3-4: Deal 6 Ice damage.
+- 5-6: Heal 6 Health and gain 4 Block.
+
+
+
+#### Encounter Modifiers
+
+Decay:
+- 16 turns
+
+Decay Effect:
+- Heal all enemies 10 Health.
+
+
 
 
 
