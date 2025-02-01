@@ -100,12 +100,13 @@ Description:
 - Specialises in stealth and adaptability.
 
 Passive abilities:
-- Gain one card draw.
-- Gain an instant Epsilon transition the first time you would collide with the enemy Spell Pointer.
+- Gain an instant Epsilon transition the first time you would collide with the enemy Spell Pointer each combat.
 - Disarm the first Hazard tile encountered each combat.
+- Lose an additional Health every time you take damage.
+- Whenever you would lose less than 4 Health, lose 4 Health instead.
 
 Special ability:
-- Once per turn, you may choose to Accumulate an additional Mana, skipping an intermediate tile.
+- Once per combat, reroll all enemy Intentions.
 
 
 
@@ -147,7 +148,7 @@ Description:
 
 Passive abilities:
 - Vulnerable to all elemental damage.
-- Gain one Phantasmal at the beginning of each Combat.
+- Gain 1 Phantasmal at the beginning of each Combat.
 - Void mana does not block Mana Consumption.
 
 Special Ability:
