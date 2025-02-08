@@ -3092,7 +3092,10 @@ Decay Effect:
 
 
 
+
 ### Infested Altar
+
+Channel 5 Mana.
 
 #### Infested Wolf
 |        |             |                 |
@@ -3149,6 +3152,8 @@ Decay Effect:
 
 ### Echoing Catacombs
 
+Channel 5 Mana.
+
 #### Shattered Bone Construct
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
@@ -3203,6 +3208,8 @@ Decay Effect:
 
 ### Runic Nexus
 
+Channel 5 Mana.
+
 #### Rune Golem
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
@@ -3240,10 +3247,13 @@ Actions:
 
 #### Encounter Modifiers
 
+Enemy spells count as having accumulated one additional Mana when resolving successfully.
+
 Decay:
 - 16 turns
 
 Decay Effect:
+- None.
 
 
 
@@ -3254,6 +3264,7 @@ Decay Effect:
 
 ### Eldritch Convocation
 
+Channel 4 Mana.
 
 #### Eldritch Remnant
 |        |             |                 |
@@ -3307,13 +3318,14 @@ Decay Effect:
 
 ### The Twins
 
+Channel 6 Mana.
+
 #### Aspect of Decay
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 40     | Lightning   | Ice             |
 |        | Earth       | Fire            |
-
 
 Actions:
 - 1-2: All enemies heal 4 Health.
@@ -3356,6 +3368,8 @@ Decay Effect:
 
 
 ### The Repository Archives
+
+Channel 6 Mana.
 
 #### Elder Guardian
 |        |             |                 |
@@ -3407,6 +3421,8 @@ Decay Effect:
 
 ### The Sovereign Slime
 
+Channel 5 Mana.
+
 #### Large Slime
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
@@ -3434,7 +3450,7 @@ Actions:
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 40     | Ice         | Fire            |
+| 50     | Ice         | Fire            |
 
 Actions:
 - 1-2: Heal Blast Slime 4 Health.
@@ -3554,11 +3570,12 @@ Decay Effect:
 
 ### Slightly-Worn Towel
 "Far from pristine, but still comforting."
-- If you took no damage during combat, heal 2 Health and 2 Stress.
+- If you took no damage during combat, heal 8 Health and 4 Stress.
 
 ### Strange Brew
 "A bubbling concoction of questionable origin."
-- Once per combat, you may convert 1 Mana anywhere in your Casting Queue into a Void mana at the cost of gaining 2 Stress.
+- Once per turn, you may convert 1 Mana in your Casting Queue into a Void Mana.
+- Gain 2 Stress whenever you activate this relic.
 
 ### Ominous Vial
 "The label warns of sealed evil within."
@@ -3570,7 +3587,7 @@ Decay Effect:
 
 ### Lucky Penny
 "Luck is a fickle thing, but it favors the prepared."
-- Gain 1 Gold whenever you channel exactly 3 mana in a turn.
+- Gain 1 Gold whenever you channel exactly 3 Mana in one turn.
 
 ### Bezoar
 "A Relic of resilience."
@@ -3579,22 +3596,23 @@ Decay Effect:
 
 ### Mechanical Counterweight
 "Intricate yet oddly practical."
-- Gain 1 Ward whenever you channel two mana in one turn.
+- Gain 1 Ward whenever you channel two Mana in one turn.
 
 ### Bone Effigy
 "Whispers of the departed echo within."
-- Whenever you take damage, channel one Void mana.
+- Whenever you take damage from an environmental Hazard, channel one Void Mana.
 
 ### Second-place Trophy
 "Proof of a valiant effort."
-- Draw a card when a Spell Misfires.
+- Draw two cards when a Spell Misfires.
 
 ### Glass Bead
 "Delicate yet strangely captivating."
+- Once per combat, you may freeze one enemy intent, fixing it for the next turn.
 
 ### Battered Horseshoe
 "It feels lucky."
-- Once per combat, you may reroll a probability-based event.
+- Once per combat, you may reroll one enemy intent.
 
 
 
