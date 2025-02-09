@@ -148,7 +148,7 @@ Description:
 
 Passive abilities:
 - Vulnerable to all elemental damage.
-- Gain 1 Phantasmal at the beginning of each Combat.
+- Gain 1 Phantasmal at the beginning of combat.
 - Void mana does not block Mana Consumption.
 
 Special Ability:
@@ -244,38 +244,41 @@ Roll a **D20** three times, and add the *Accepting* marker to the indicated tile
 ## Setup
 
 1. Draw 7 *Mana cards* from the *Mana deck*. If you draw 4 or more of the same kind of Mana, you may choose to discard and redraw your Mana hand.
-2. Draw 3 *Skill cards* from your *Combat deck*.
-3. You must immediately channel at least 3 Mana into your *Casting Queue* at the start of each combat.
-4. Place your *Spell Pointer* on tile 11, and the *Enemy Spell Pointer* on tile 17. If playing with 2 players, place player 1's Spell Pointers on tile 12, and Player 2's Spell Pointer on tile 10.
+2. You must immediately channel at least 3 Mana from your hand into your *Casting Queue* at the start of each combat.
+3. Draw 3 *Skill cards* from your *Combat deck*.
+4. Place your *Spell Pointer* on tile 11, and the *Enemy Spell Pointer* on tile 17. If playing with 2 players, place Player 1's Spell Pointers on tile 12, and Player 2's Spell Pointers on tile 10.
 4. Reveal the enemy card and commence combat.
 
 
 ## Turn Phases
+After initial setup, the phases in a normal turn are as follows:
+- [Reset](#reset-phase)
+- [Draw](#draw-phase)
+- [Channelling](#channelling-phase)
+- [Casting](#casting-phase)
+- [Enemy actions](#enemy-actions)
+- ([Decay](#decay))
 
-### Setup
+### Reset Phase
 
 - Remove leftover block from the previous turn.
-- For each enemy, roll a D6 to determine [enemy Intentions](#enemy-intentions) (if applicable).
+- For each enemy, roll a **D6** to determine [enemy Intentions](#enemy-intentions) (if applicable).
 
 
-### Draw
+### Draw Phase
 
 Draw *three* cards total from your Mana and Combat decks (you may divide your draws however you like). Non-specific modifiers to draw affect this number (some modifiers will specify Mana or Skill draw).
 
-### Channelling
+### Channelling Phase
 If playing with 2 players, take your turns simultaneously.
 
-If your initial tile is unoccupied, you may add a new Spell Pointer there. Then, you may channel up to 3 Mana from your hand into any existing Casting Queue. The 3 Mana may be distributed between Queues at will.
+If your initial tile is unoccupied, you may add a new Spell Pointer there. Then, you may channel up to 3 Mana from your hand into any existing Casting Queue. The 3 Mana may be distributed between Queues at will. There may be up to 2 concurrent spells cast by the Player(s) at once.
 
-### Casting
+### Casting Phase
 
 The following may be performed in any order.
 
 - Select two unoccupied Rune tiles and change their rotations.
-
-- For each Cast Speed, collect one Mana from the head of the Casting Queue into an *accumulation stack* and move the associated Spell Pointer along transitions accordingly. Perform these actions separately for each Spell Pointer.
-
-  Spell Pointers cannot be partially resolved. That is, if your Cast Speed is 2, then you cannot move a Pointer one tile, play a Skill, then finish moving the Pointer after.
 
 
 
@@ -289,15 +292,23 @@ The following may be performed in any order.
 
 
 
-### Resolution
+- For each Cast Speed, collect one Mana from the head of the Casting Queue into an *accumulation stack* and move the associated Spell Pointer along transitions accordingly. Perform these actions separately for each Spell Pointer.
 
-If a Casting Queue is empty and the associated Spell Pointer is on an Accepting tile, the Spell is successfully *Resolved*.
+  Spell Pointers cannot be partially resolved. That is, if your Cast Speed is 2, then you cannot move a Pointer one tile, play a Skill, then finish moving the Pointer after.
 
-Otherwise, the Spell [*Misfires*](#Misfires). If two Spell Pointers collides, both Spells Misfire.
+  If a Casting Queue is empty and the associated Spell Pointer is on an Accepting tile, the Spell is successfully [*Resolved*](#resolution).
+  
+  Otherwise, the Spell [*Misfires*](#Misfires). If two Spell Pointers collides, both Spells Misfire.
 
-Some special effects may also instantly Resolve Spells. Whenever this happens, all Queued Mana counts as Accumulated.
 
-Spells deal damage as follows:
+Whenever your last Spell Resolves or Misfires, instantly start a new Spell and channel the top 3 Mana from your Mana deck.
+
+#### Resolution
+
+Some special effects may also instantly Resolve Spells outside of the normal Accepting Tile process. Whenever this happens, all Queued Mana counts as Accumulated.
+
+When a Spell successfully resolves, it deals damage to **one** enemy as follows:
+
 1. Count the Accumulated Mana and convert to damage as follows:
 
    |                  |        |
@@ -322,9 +333,40 @@ Process [enemy defensive actions](#enemy-actions) before applying damage.
 If a enemy card has requirements that may be met mid-cast, track them with a counter so you don't forget. Clear all counters whenever a Spell Resolves.
 
 
+
+#### Misfires
+
+A **Player** Spell will *Misfire* if it:
+- Resolves on a tile that is not Accepting;
+- collides with any other Spell;
+- takes a transition that leaves the board;
+- takes a transition to an invalid state.
+
+An **Enemy** Spell will Misfire if it:
+- Resolves on a tile that is Accepting;
+- collides with any other Spell.
+
+(If an enemy Spell leaves the board or takes a transition to an invalid state, it successfully Resolves instead.)
+
+Upon a Misfire, the caster takes half the damage of the Misfired Spell (rounded up) and gain one *Stress*.
+
+## Damage Resistance and Vulnerability
+Enemies and players take **half** damage (rounded up) from Resisted damage types, and **double** damage (rounded down) from Vulnerabilities.
+
+[Resistance](#resistance) and [Vulnerability tokens](#vulnerable) apply the associated effect for **all** damage types.
+
+If you are Vulnerable and Resistant to the same damage type, they cancel out and no damage multipliers are applied. Having multiple sources of Vulnerability and Resistance do not have additional effect, e.g. if you are on a [shattered](#shattered-earth) tile and have 5 Resistance tokens, the two effects simply cancel out.
+
+
+
+After a Spell successfully Resolves or misfires,
+
+immediately channel 3 Mana from the top of the Mana deck into a ne
+
+
 ### Enemy Actions
 
-After all Spells resolve and Skills have been played, enemies finally perform the listed *Intention* action(s) on their card. (Defensive actions may be triggered earlier.)
+After all Spells Resolve and Skills have been played, enemies finally perform the listed *Intention* action(s) on their card. (Defensive actions may be triggered earlier.)
 
 The leftmost enemy acts first, before proceeding rightwards.
 
@@ -347,29 +389,6 @@ While Decay is active, gain 1 Stress every turn.
 
 
 # Combat Mechanics
-
-## Misfires
-
-A **Player** Spell will *Misfire* if it:
-- Resolves on a tile that is not Accepting;
-- collides with any other Spell;
-- takes a transition that leaves the board;
-- takes a transition to an invalid state.
-
-An **Enemy** Spell will Misfire if it:
-- Resolves on a tile that is Accepting;
-- collides with any other Spell.
-
-(If an enemy Spell leaves the board or takes a transition to an invalid state, it successfully Resolves instead.)
-
-Upon a Misfire, the caster takes half the damage of the Misfired Spell (rounded up) and gain one *Stress*.
-
-## Damage Resistance and Vulnerability
-Enemies and players take **half** damage (rounded up) from Resisted damage types, and **double** damage (rounded down) from Vulnerabilities.
-
-[Resistance](#resistance) and [Vulnerability tokens](#vulnerable) apply the associated effect for **all** damage types.
-
-If you are Vulnerable and Resistant to the same damage type, they cancel out and no damage multipliers are applied. Having multiple sources of Vulnerability and Resistance do not have additional effect, e.g. if you are on a [shattered](#shattered-earth) tile and have 5 Resistance tokens, the two effects simply cancel out.
 
 ## Void Mana
 
@@ -619,14 +638,17 @@ Maximum hand size is 7 by default.
 
 ## Phantasmal
 - The next instance of damage taken is reduced to 1.
+- Removed after the next instance of damage.
 
 ## Vulnerable
 Place a Vulnerability Counter on the affected target.
-- Causes Vulnerability to all damage types. Removed after the next instance of damage.
+- Causes Vulnerability to all damage types.
+- Removed after the next instance of damage.
 
 ## Resistant
 Place a Resistance Counter on the affected target.
-- Grants Resistance to all damage types. Removed after the next instance of damage.
+- Grants Resistance to all damage types.
+- Removed after the next instance of damage.
 
 
 
@@ -1129,11 +1151,11 @@ Cost:
 ### Sentinel
 "An unshakable guardian stands beside you, shielding you from harm with unwavering vigilance."
 - Lose all Ward.
-- Gain 1 Phantasmal.
+- Gain 1 Phantasmal. Remove at the end of turn.
 - Exhaust.
 
 Cost:
-- 3 Earth Mana
+- 2 Earth Mana
 - 1 Generic Mana
 
 
@@ -1391,7 +1413,7 @@ Cost:
 
 ### Storm Call
 "The storm answers, relentless and unyielding."
-- Deal D6 Lightning damage to all enemies.
+- Deal **D6** Lightning damage to all enemies.
 
 Cost:
 - 2 Lightning Mana
@@ -1455,7 +1477,7 @@ Cost:
 <!-- Colourless -->
 ### Riposte
 "Timing is everything."
-- Gain Phantasmal for this turn.
+- Gain 1 Phantasmal. Remove at the end of turn.
 
 Cost:
 - 4 Generic Mana
@@ -2620,22 +2642,11 @@ A glowing statue of an ancient deity radiates warmth and light. Its gaze fills y
 
 
 
-# Enemy Cards
-
-## Template
-Special conditions.
-
-Initial cast:
-
-Loop cast:
-
-Decay:
+# Encounters
 
 
 
 ## Common Encounters
-
-
 
 
 ### Skeleton Trio
@@ -3631,15 +3642,16 @@ Decay Effect:
 
 ### Sunstone
 "This unremarkable-looking rock feels pleasantly warm to the touch."
-- Heal 2 HP at the start of every combat. If your HP is full, gain 4 Ward instead.
+- Heal 2 Health at the start of every combat. If your Health is full, gain 4 Ward instead.
 
 ### Moonstone
 "This unremarkable-looking rock emits a pleasant coolness."
-- Whenever a Spell successfully resolves, heal one Stress.
+- Whenever a Spell successfully resolves, heal 1 Stress.
 
 ### Duplication Potion
 "In for a penny..."
-- Once per combat, rechannel your entire Casting Queue.
+- Once per combat, rechannel your entire Casting Queue after a Spell resolves or misfires.
+- (The previous Spell still takes effect.)
 
 ### Golden Bracelet
 "Abundance, greed, envy."
@@ -3647,7 +3659,7 @@ Decay Effect:
 
 ### Tin Flute
 "Despite your best efforts, it remains eerily silent."
-- Once per combat, you may channel one mana of your choice without cost.
+- Once per combat, you may instantly draw and channel the top three cards from the Mana deck.
 
 ### Broken Oboe
 "Broken, but still somehow melodic."
@@ -3656,7 +3668,7 @@ Decay Effect:
 ### Vial of Snake Oil
 "It is often the case that wanting is more desirable than having."
 - Draw four additional cards at the beginning of combat.
-- Lose 1 Health every time you play a Skill.
+- Lose 4 Health for each skill you play after the first each turn.
 
 ### Blighted Tome
 "The dusty pages seem alive with a sinister energy."
@@ -3702,11 +3714,12 @@ Decay Effect:
 
 ### Molten Crown
 "Wreathed in flames, your foes will burn in your glorious presence."
-- Every time you channel a Fire mana, take two Fire damage, and immediately deal one Fire damage to all enemies.
+- Every time you channel a Fire mana, take two Fire damage and immediately deal one Fire damage to all enemies.
+- Take no damage from Scorch hazards.
 
 ### Pocket Sundial
 "A shadow looms on its face, unerring, regardless of the surrounding light."
-- Once per combat, increase Cast Speed by 2 for one turn.
+- Once per combat, instantly Accumulate 2 Mana.
 
 ### The Storm's Wake
 "Your power echoes like thunder after lightning."
@@ -3736,11 +3749,13 @@ Decay Effect:
 
 ### Crystalised Heart
 "A fragile core encased in unbreakable resolve."
-- Whenever a Casting Queue only has a single Mana channelled, gain 1 Ward.
+- Whenever your Casting Queue has three or fewer Mana channelled, gain 2 Ward.
+- Gain 4 Ward at the beginning of combat.
 
 ### The Overture
 "Every masterpiece begins with a single note."
-- 
+- Channel 1 additional Mana at the start of combat.
+- The first Spell you cast each combat ignores all Resistances.
 
 ### Entropic Sigil
 "The path of least resistance."
@@ -3762,7 +3777,7 @@ Decay Effect:
 
 ### Dawn's Embrace
 "One loved by the Sun fears not the endless darkness."
-- Gain one Phantasmal at the beginning of combat.
+- Gain 1 Phantasmal at the beginning of combat.
 - Ignore the first instance of Stress gain each combat.
 - While you have Ward, enemies are Vulnerable to Fire damage.
 
