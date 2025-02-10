@@ -515,11 +515,13 @@ If Warp is applied to a tile with existing elemental Hazards, do not apply Warp 
 
 
 #### Infested:
-Upon *entering* an Infested tile, remove the channeled Mana at the head of the Casting Queue. The Infestation spreads to the next tile the Spell Pointer moves to.
+Upon *entering* an Infested tile, remove the channelled Mana at the head of the Casting Queue and gain 4 Stress.
 
 While on an Infested tile, Skills cost an additional generic Mana, and multi-target Skills may only target one enemy.
 
-If a Fire transition is used to *leave* an Infested tile, the Hazard is removed from this tile, and spreads in the opposite direction instead.
+When leaving an Infested tile, the Hazard moves to in the opposite direction; if the infestation leaves the rune board, gain a Curse.
+
+If a Fire transition is used to *leave* an Infested tile, the Hazard is removed instead.
 
 (Infestation has no effect on enemies.)
 
@@ -701,7 +703,7 @@ Cost:
 - Exhaust at end of your turn.
 
 ### Sapped
-- Discard two Mana.
+- Discard two Mana from hand.
 - Weight 3
 - Exhaust.
 
@@ -2651,6 +2653,8 @@ A glowing statue of an ancient deity radiates warmth and light. Its gaze fills y
 
 ### Skeleton Trio
 
+Channels 6 Mana.
+
 #### Skeleton Mage (Fire)
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
@@ -2703,6 +2707,8 @@ Decay Effect:
 
 ### Skeleton Army
 
+Channels 4 Mana.
+
 #### Skeleton Guard
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
@@ -2751,6 +2757,8 @@ Decay Effect:
 
 ### Pack of Slimes
 
+Channels 4 Mana.
+
 #### Slime
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
@@ -2796,6 +2804,8 @@ When killing any slime, heal all remaining slimes 5 Health.
 
 
 ### Forest Clearing
+
+Channels 4 Mana.
 
 #### Slime
 |        |             |                 |
@@ -2852,6 +2862,8 @@ Decay Effect:
 
 ### Ominous Shrine
 
+Channels 6 Mana.
+
 ### Hooded Figure
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
@@ -2900,6 +2912,7 @@ Decay Effect:
 
 ### Overgrown Graveyard
 
+Channels 6 Mana.
 
 ### Wraith
 |        |             |                 |
@@ -2953,6 +2966,7 @@ Decay Effect:
 
 ### Bandit Raid
 
+Channels 5 Mana.
 
 #### Bandit Marauder
 |        |             |                 |
@@ -2992,6 +3006,8 @@ Decay Effect:
 
 
 ### Necromantic Cult
+
+Channels 5 Mana.
 
 #### Skeleton Gladiator
 |        |             |                 |
@@ -3042,6 +3058,8 @@ Decay Effect:
 
 
 ### Ancient Arena
+
+Channels 5 Mana.
 
 #### Skeleton Knight
 |        |             |                 |
@@ -3106,7 +3124,7 @@ Decay Effect:
 
 ### Infested Altar
 
-Channel 5 Mana.
+Channels 5 Mana.
 
 #### Infested Wolf
 |        |             |                 |
@@ -3129,7 +3147,7 @@ Actions:
 - 1-3: Deal 4 Earth damage.
 - 4-6: Gain 4 Block.
 
-#### Fungal Mass
+#### Fungal Symbiote
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
@@ -3151,7 +3169,7 @@ Decay:
 - 12 turns
 
 Decay Effect:
-- Infest one tile each turn.
+- None.
 
 
 
@@ -3163,7 +3181,7 @@ Decay Effect:
 
 ### Echoing Catacombs
 
-Channel 5 Mana.
+Channels 5 Mana.
 
 #### Shattered Bone Construct
 |        |             |                 |
@@ -3219,7 +3237,7 @@ Decay Effect:
 
 ### Runic Nexus
 
-Channel 5 Mana.
+Channels 5 Mana.
 
 #### Rune Golem
 |        |             |                 |
@@ -3275,7 +3293,7 @@ Decay Effect:
 
 ### Eldritch Convocation
 
-Channel 4 Mana.
+Channels 4 Mana.
 
 #### Eldritch Remnant
 |        |             |                 |
@@ -3329,7 +3347,7 @@ Decay Effect:
 
 ### The Twins
 
-Channel 6 Mana.
+Channels 6 Mana.
 
 #### Aspect of Decay
 |        |             |                 |
@@ -3380,7 +3398,7 @@ Decay Effect:
 
 ### The Repository Archives
 
-Channel 6 Mana.
+Channels 6 Mana.
 
 #### Elder Guardian
 |        |             |                 |
@@ -3432,7 +3450,7 @@ Decay Effect:
 
 ### The Sovereign Slime
 
-Channel 5 Mana.
+Channels 5 Mana.
 
 #### Large Slime
 |        |             |                 |
@@ -3476,7 +3494,7 @@ Decay:
 - 16 turns
 
 Decay Effect:
-- Heal all enemies 10 Health.
+- Heal all enemies 4 Health.
 
 
 
@@ -3485,26 +3503,36 @@ Decay Effect:
 
 
 
-###
-
-#### Fungal Symbiote
 
 
 
 
+### The Champion Apparent
 
-
-
-
+Channels 5 Mana.
 
 #### The Ascendant
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 75     |             |                 |
+
+Actions:
+- 1-2: Deal 4 Fire damage.
+- 3-4: Heal 4 Health.
+- 5-6: Accumulate an additional Mana.
 
 
+#### Encounter Modifiers
 
+The Ascendant gains 4 Block for each Mana accumulated each turn.
+Gain 1 Stress every time the Ascendant successfully resolves a spell.
 
+Decay:
+- 18 turns
 
-
-
+Decay Effect:
+- Heal all enemies 4 Health.
 
 
 
@@ -3514,15 +3542,208 @@ Decay Effect:
 
 ## Bosses
 
+
+
+
 ### The Pale King
+
+Channels 6 Mana.
+
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 120    | Lightning   | Earth           |
+|        |             | Ice             |
+
+Action 1:
+- (Cycling)
+- Gain 6 Block.
+- Gain 6 Block.
+- Gain 6 Block.
+- Force player to discard one Skill Card.
+  Take **X\*8** Lightning damage where **X** is the total Mana cost of the discarded card.
+  Take 8 Stress damage if no Skill cards are in hand.
+
+Action 2:
+- 1-2: Shuffle 1 Sapped into Combat deck.
+- 3-4: Gain 4 Block.
+- 5-6: Deal 6 Lightning damage.
+
+
+#### Encounter Modifiers
+
+The Pale King cannot lose more than 20 Health in a single turn.
+Whenever the Pale King loses 15 or more Health in one turn, reset the cycling action to the first state.
+
+Decay:
+- 20 turns
+
+Decay Effect:
+- Can no longer remove stress.
+- The Pale King now performs the last cycling action every turn.
+
+
+
+
+
+
 
 ### The Consuming Dark
 
+Channels 6 Mana.
+
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 120    | Ice         | Fire            |
+|        |             | Lightning       |
+
+Action 1:
+- (Cycling)
+- Shuffle 1 Hex into Combat deck.
+- Heal **X/2** Health, where **X** is the Player's Stress.
+- Deal **X** Ice damage, where **X** is the Player's Stress.
+
+Action 2:
+- 1-2: Gain 2 Stress.
+- 3-4: Gain 10 Block.
+- 5-6: Deal 8 Ice damage.
+
+#### Encounter Modifiers
+
+Gain 2 Stress every turn.
+Heal 1 Stress for each Ice Mana you Consume when activating a Skill.
+Upon casting a spell of Primary Damage Type Fire or Lightning, heal 5 Stress.
+
+Decay:
+- 20 turns
+
+Decay Effect:
+- Can no longer remove stress.
+
+
+
+
+
+
 ### The Endless Tide
+
+Channels 6 Mana.
+
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 120    | Fire        | Earth           |
+|        |             | Lightning       |
+
+Action 1:
+- (Cycling)
+- Gain 6 Block.
+- Gain 6 Block.
+- Gain 6 Block.
+- Deal **X\*8** Ice damage where **X** is the total number of Status and Curse cards in hand.
+  Gain 8 Stress if no such cards are in hand.
+
+Action 2:
+- 1-2: Shuffle 1 Bleed into Combat deck.
+- 3-4: Shuffle 1 Burn into Combat deck.
+- 5-6: Shuffle 1 Hex into Combat deck.
+
+#### Encounter Modifiers
+
+Draw an additional card each turn.
+Whenever you exhaust a Status card, draw a card.
+Whenever you exhaust 5 Status cards, gain 1 Phantasmal.
+Phantasmal is not removed from damage applied by Status cards.
+
+Decay:
+- 20 turns
+
+Decay Effect:
+- Can no longer remove stress.
+- Can no longer gain Phantasmal.
+
+
+
+
 
 ### Omniphobia
 
+Channels 5 Mana.
+
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 120    |             | Earth           |
+|        |             | Ice             |
+
+Action 1:
+- (Cycling)
+- Take 4 Stress damage if...
+- Take 16 **X** damage if...
+
+...you do not Channel or Consume a **X** Mana this turn, where:
+- 1: **X** is Earth.
+- 2: **X** is Ice.
+- 3-4: **X** is Fire.
+- 5-6: **X** is Lightning.
+
+Action 2:
+- 1-3: Deal 6 Fire Damage.
+- 4-5: Deal 8 Lightning Damage.
+- 6: Gain 1 Phantasmal.
+
+
+#### Encounter Modifiers
+
+Warp two tiles at the beginning of combat.
+
+Decay:
+- 20 turns
+
+Decay Effect:
+- Can no longer remove stress.
+
+
+
 ### The Zenith
+
+Channels 12 Mana. Cast Speed 2.
+
+|        |             |                 |
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 120    |             | Fire            |
+|        |             | Earth           |
+
+
+Action 1:
+- (Cycling)
+- Gain 6 Block.
+- Gain 6 Block.
+- Gain 6 Block.
+- Accumulate an additional Mana this turn.
+
+Action 2:
+- 1-2: Deal 6 Ice Damage.
+- 3-4: Deal 6 Lightning Damage.
+- 5-6: Shuffle 1 Hex into Combat deck.
+
+
+#### Encounter Modifiers
+
+Shuffle any Mana Accumulated by the Zenith back into Mana deck.
+Enemy spells have no effect.
+If the Zenith Misfires, lose 40 Health.
+If the Zenith Resolves a Spell, lose 40 Health and gain 8 Stress.
+Every time the Zenith loses 15 Health in a single turn, channel the top two Mana from the Mana deck into the Zenith's Spell Queue.
+
+Decay:
+- 20 turns
+
+Decay Effect:
+- The Zenith gains 2 Cast Speed.
+
 
 ### The Annihilating Light
 
