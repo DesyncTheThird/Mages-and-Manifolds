@@ -272,7 +272,10 @@ Draw *three* cards total from your Mana and Combat decks (you may divide your dr
 ### Channelling Phase
 If playing with 2 players, take your turns simultaneously.
 
-If your initial tile is unoccupied, you may add a new Spell Pointer there. Then, you may channel up to 3 Mana from your hand into any existing Casting Queue. The 3 Mana may be distributed between Queues at will. There may be up to 2 concurrent spells cast by the Player(s) at once.
+- If your initial tile is unoccupied, you may add a new Spell Pointer there. There may be up to 2 concurrent spells cast by the Player(s) at once.
+
+- Then, you may channel up to 3 Mana from your hand into any existing Casting Queue. The 3 Mana may be distributed between Queues at will.
+
 
 ### Casting Phase
 
@@ -288,7 +291,7 @@ The following may be performed in any order.
     and you play a Skill that requires 1 Fire and 1 Ice Mana, then you must take the newest Mana possible:
 
        (Head) `[Fire - Ice - Lightning - Earth]` (Tail)
-   Consumed Mana is discarded and not accumulated.
+   Consumed Mana is discarded and not Accumulated.
 
 
 
@@ -325,7 +328,7 @@ When a Spell successfully resolves, it deals damage to **one** enemy as follows:
 
 2. Deal this much damage as the type of the last Mana Accumulated (the *Primary Damage Type*);
 3. Deal half as much damage (rounded down) as the type of the penultimate Mana Accumulated (the *Secondary Damage Type*).
-4. If the Secondary Damage Type coincides with the Primary Damage Type, then deal double primary damage (instead of 1.5 times), gain four [*Stress*](#stress), and apply the associated elemental [Hazard](#Hazards) to your current tile.
+4. If the Secondary Damage Type coincides with the Primary Damage Type, additionally apply the associated elemental [Hazard](#Hazards) to your current tile.
 5. If the Spell was a Misfire, halve the total damage.
 
 Process [enemy defensive actions](#enemy-actions) before applying damage.
@@ -393,7 +396,6 @@ While Decay is active, gain 1 Stress every turn.
 # Combat Mechanics
 
 ## Void Mana
-
 Void Mana is a potent but dangerous type of Mana:
 - Void Mana can take any transition.
 - Mana further in the Casting Queue than a Void Mana cannot be consumed for Skills.
@@ -467,14 +469,21 @@ Reaching 20 points of Stress mid-combat will instantly kill your character.
 
 ## Hazards
 
+Rune tiles may be afflicted with various Hazards that affect the caster when entered; mark hazards on the rune board with the relevant tokens.
+
+Enemies do not take damage from Hazards, but Resistance and Vulnerability modifiers still apply (to every enemy in an encounter).
+
+Hazards are removed at the end of combat.
+
 #### Scorched (Fire):
-If a Spell pointer *enters* a Scorched tile, the caster takes **6-X** Fire damage, where **X** is the number of channelled Ice Mana, and the Scorched Hazard spreads to the next tile the Spell Pointer moves to.
+Upon *entering* a Scorched tile, take **6-X** Fire damage, where **X** is the number of channelled Ice Mana.
 
 While on a Scorched tile, the caster becomes
 - Vulnerable to Lightning damage.
 - Resistant to Ice damage.
 
-If a Ice transition is used to *leave* a Scorched tile, the Hazard is removed and does not spread.
+If a Ice transition is used to *leave* a Scorched tile, the Hazard is removed.
+If a Fire transition is used to *leave*, the Hazard spreads to the next tile the Spell Pointer moves to.
 
 
 #### Flooded (Ice):
@@ -485,10 +494,11 @@ While on a Flooded tile, the caster becomes:
 - Resistant to Fire damage.
 
 If a Fire transition is used to *leave* a Flooded tile, the Hazard is removed.
+If an Ice transition is used to *leave*, the Hazard spreads to the next tile the Spell Pointer moves to.
 
 
 #### Shocked (Lightning):
-Upon *entering* a Shocked tile, take **2+X** Lightning damage, where **X** is the number of channelled Ice Mana, and channel two Fire mana.
+Upon *entering* a Shocked tile, take **X+4** Lightning damage, where **X** is the number of channelled Ice Mana.
 
 While on a Shocked tile, the caster becomes:
 - Vulnerable to Ice damage.
@@ -498,7 +508,7 @@ If an Earth transition is used to *leave* a Shocked tile, the Hazard is removed.
 
 
 #### Shattered (Earth):
-If a Fire transition is used to *enter or exit* a Shattered tile, the Shatter Hazard spreads to all adjacent tiles and the caster takes **6** Earth damage.
+If a Fire transition is used to *enter or exit* a Shattered tile, the caster takes **X** Earth damage, where **X** is the total number of channelled Fire and Earth Mana.
 
 While on a Shattered tile, the caster becomes:
 - Vulnerable to all damage types.
@@ -511,17 +521,13 @@ Upon *entering* a Warped tile, take **X** Void damage, where **X** is the number
 
 While on a Warped tile, Damage Resistances and Vulnerability are inverted, and outbound Fire/Ice and Lightning/Earth transitions are swapped.
 
-Finishing a turn on a Warped tile with a Void Mana channelled instantly causes a Misfire.
-
-If Warp is applied to a tile with existing elemental Hazards, do not apply Warp and instead replace each Hazard on the tile with its opposite Hazard.
-
 
 #### Infested:
-Upon *entering* an Infested tile, remove the channelled Mana at the head of the Casting Queue and gain 4 Stress.
+Upon *entering* an Infested tile, shuffle 2 Poison into Combat deck.
 
-While on an Infested tile, Skills cost an additional generic Mana, and multi-target Skills may only target one enemy.
+While on an Infested tile, Skills cost an additional generic Mana.
 
-When leaving an Infested tile, the Hazard moves to in the opposite direction; if the infestation leaves the rune board, gain a Curse.
+When leaving an Infested tile, the Hazard moves to the tile in the opposite direction; if the infestation leaves the rune board, gain a Curse.
 
 If a Fire transition is used to *leave* an Infested tile, the Hazard is removed instead.
 
@@ -706,7 +712,6 @@ Cost:
 
 ### Sapped
 - Discard two Mana from hand.
-- Weight 3
 - Exhaust.
 
 Cost:
@@ -1894,7 +1899,7 @@ Restore 8 Health.
 Exhaust all Bleed, Burn, and Sapped status cards from hand.
 
 ## Blessed Water
-Exhaust all Poison and Hex status cards from hand.
+Exhaust all Hex status cards from hand.
 
 ## Laudanum
 Heal 2 Stress.
@@ -2666,7 +2671,6 @@ A glowing statue of an ancient deity radiates warmth and light. Its gaze fills y
 Channels 6 Mana.
 
 #### Skeleton Mage (Fire)
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     | Fire        | Earth           |
@@ -2678,7 +2682,6 @@ Actions:
 - 6: Scorch one tile.
 
 #### Skeleton Mage (Lightning)
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     | Lightning   | Earth           |
@@ -2689,7 +2692,6 @@ Actions:
 - 6: Shock one tile.
 
 #### Skeleton Mage (Ice)
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     | Ice         | Earth           |
@@ -2720,7 +2722,6 @@ Decay Effect:
 Channels 4 Mana.
 
 #### Skeleton Guard
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 15     | Earth       | Lightning       |
@@ -2731,7 +2732,6 @@ Actions:
 - 5-6: All enemies gain 4 Block.
 
 #### Skeleton Knight
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 15     | Earth       | Lightning       |
@@ -2741,7 +2741,6 @@ Actions:
 - 4-6: Gain 4 Block.
 
 #### Skeleton Archer
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 12     |             | Earth           |
@@ -2770,7 +2769,6 @@ Decay Effect:
 Channels 4 Mana.
 
 #### Slime
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     | Ice         | Fire            |
@@ -2780,7 +2778,6 @@ Actions:
 - 5-6: Gain 4 Block.
 
 #### Slime
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     | Ice         | Fire            |
@@ -2790,7 +2787,6 @@ Actions:
 - 5-6: Gain 4 Block.
 
 #### Large Slime
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 15     | Ice         | Fire            |
@@ -2818,7 +2814,6 @@ When killing any slime, heal all remaining slimes 5 Health.
 Channels 4 Mana.
 
 #### Slime
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     | Ice         | Fire            |
@@ -2828,7 +2823,6 @@ Actions:
 - 5-6: Gain 4 Block.
 
 #### Slime
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     | Ice         | Fire            |
@@ -2838,7 +2832,6 @@ Actions:
 - 5-6: Gain 4 Block.
 
 #### Dryad
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     | Ice         | Fire            |
@@ -2875,7 +2868,6 @@ Decay Effect:
 Channels 6 Mana.
 
 ### Hooded Figure
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     |             | All             |
@@ -2885,7 +2877,6 @@ Actions:
 - 5-6: All enemies gain 4 Block.
 
 ### Dark Cultist
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     |             | All             |
@@ -2895,7 +2886,6 @@ Actions:
 - 5-6: Gain 6 Block.
 
 ### Corrupted Seer
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 30     |             | All             |
@@ -2925,7 +2915,6 @@ Decay Effect:
 Channels 6 Mana.
 
 ### Wraith
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 4      | All         |                 |
@@ -2937,7 +2926,6 @@ Actions:
 - Deal 1 Ice damage.
 
 ### Plague Ghoul
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     |             | Fire            |
@@ -2947,7 +2935,6 @@ Actions:
 - 5-6: Shuffle 1 Poison into Combat deck.
 
 ### Dire Wolf
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     |             | Lightning       |
@@ -2979,7 +2966,6 @@ Decay Effect:
 Channels 5 Mana.
 
 #### Bandit Marauder
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     | Earth       | Lightning       |
@@ -2990,15 +2976,13 @@ Actions:
 
 
 #### Bandit Mage
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 12     |             | Ice             |
 
-Actions:
-- (Cycling)
+Actions (Cycling):
 - All enemies heal 4 Health.
-- All enemies gain 4 Block.
+- All enemies gain 8 Block.
 
 #### Encounter Modifiers
 
@@ -3020,7 +3004,6 @@ Decay Effect:
 Channels 5 Mana.
 
 #### Skeleton Gladiator
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 12     |             | Earth           |
@@ -3031,7 +3014,6 @@ Actions:
 
 
 #### Skeleton Duelist
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 12     |             | Earth           |
@@ -3042,7 +3024,6 @@ Actions:
 
 
 #### Necromancer
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     |             | Ice             |
@@ -3072,7 +3053,6 @@ Decay Effect:
 Channels 5 Mana.
 
 #### Skeleton Knight
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 15     | Earth       | Lightning       |
@@ -3082,7 +3062,6 @@ Actions:
 - 4-6: Gain 4 Block.
 
 #### Shadow Duelist
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     |             | Ice             |
@@ -3092,7 +3071,6 @@ Actions:
 - 4-6: Gain 4 Block.
 
 #### Lich
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     |             | Fire            |
@@ -3137,7 +3115,6 @@ Decay Effect:
 Channels 5 Mana.
 
 #### Infested Wolf
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 12     |             | Fire            |
@@ -3148,7 +3125,6 @@ Actions:
 - 6: Shuffle 1 Poison into Combat deck.
 
 #### Infested Bandit
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 18     |             | Lightning       |
@@ -3158,7 +3134,6 @@ Actions:
 - 4-6: Gain 4 Block.
 
 #### Fungal Symbiote
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 40     |             | Fire            |
@@ -3194,7 +3169,6 @@ Decay Effect:
 Channels 5 Mana.
 
 #### Shattered Bone Construct
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 30     |             | Lightning       |
@@ -3204,7 +3178,6 @@ Actions:
 - 4-6: Gain 6 Block.
 
 #### Amalgamated Ruins
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 60     |             | Lightning       |
@@ -3213,7 +3186,6 @@ Actions:
 - Deal 2 Earth damage.
 
 #### Stasis Automaton
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     |             | All             |
@@ -3222,7 +3194,7 @@ Cannot be damaged until Amalgamated Ruins is destroyed.
 
 Actions:
 - 1-3: None.
-- 4: Shuffle a Sapped into Combat deck.
+- 4: Shuffle 1 Sapped into Combat deck.
 - 5: Flood a random tile.
 - 6: Shatter a random tile.
 
@@ -3250,17 +3222,15 @@ Decay Effect:
 Channels 5 Mana.
 
 #### Rune Golem
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 24     | Earth       | Lightning       |
 
 Actions:
 - 1-4: None.
-- 5-6: Shuffle a Sapped into Combat deck.
+- 5-6: Shuffle 1 Sapped into Combat deck.
 
 #### Voidbringer
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     |             | Earth           |
@@ -3271,7 +3241,6 @@ Actions:
 - 6: Shuffle a Poison into Combat deck.
 
 #### Beacon of Madness
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 40     |             | Ice             |
@@ -3279,14 +3248,14 @@ Actions:
 
 Actions:
 - 1-3: None.
-- 4: Shuffle a Sapped into Combat deck.
+- 4: Shuffle 1 Sapped into Combat deck.
 - 5: Shock a random tile.
 - 6: Flood a random tile.
 
 
 #### Encounter Modifiers
 
-Enemy spells count as having accumulated one additional Mana when resolving successfully.
+Enemy spells count as having Accumulated one additional Mana when resolving successfully.
 
 Decay:
 - 16 turns
@@ -3306,7 +3275,6 @@ Decay Effect:
 Channels 4 Mana.
 
 #### Eldritch Remnant
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 16     | Lightning   | Fire            |
@@ -3317,7 +3285,6 @@ Actions:
 - 5-6: Increase The Harbinger's Intention by 2.
 
 #### Eldritch Echo
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 16     | Ice         | Earth           |
@@ -3326,7 +3293,6 @@ Actions:
 - Performs the same action as The Harbinger.
 
 #### The Harbinger
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 40     |             |                 |
@@ -3360,7 +3326,6 @@ Decay Effect:
 Channels 6 Mana.
 
 #### Aspect of Decay
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 40     | Lightning   | Ice             |
@@ -3373,7 +3338,6 @@ Actions:
 
 
 #### Aspect of Apathy
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 40     | Ice         | Earth           |
@@ -3386,7 +3350,7 @@ Actions:
 
 #### Encounter Modifiers
 
-Once one Aspect is defeated, the remaining Aspect gains 2 Resistance.
+Once one Aspect is defeated, the remaining Aspect gains 2 Phantasmal.
 
 Whenever the enemy successfully resolves a Spell, Shatter one tile.
 
@@ -3411,7 +3375,6 @@ Decay Effect:
 Channels 6 Mana.
 
 #### Elder Guardian
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     | Fire        | Ice            |
@@ -3421,7 +3384,6 @@ Actions:
 - 5-6: Force player to draw two Skill Cards.
 
 #### Elder Guardian
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     | Earth       | Lightning       |
@@ -3431,13 +3393,12 @@ Actions:
 - 5-6: Force player to draw two Skill Cards.
 
 #### The Collector
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 40     |             | Earth           |
 
 - 1-3: Force player to draw two Skill Cards.
-- 4-6: Deal **X** Ice damage, where **X** is the number of cards in the player's hand.
+- 4-6: Deal **X\*2** Ice damage, where **X** is the number of cards in the player's hand.
 
 #### Encounter Modifiers
 
@@ -3463,7 +3424,6 @@ Decay Effect:
 Channels 5 Mana.
 
 #### Large Slime
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 15     | Ice         | Fire            |
@@ -3473,20 +3433,17 @@ Actions:
 - 5-6: Shuffle 1 Poison into Combat deck.
 
 #### Blast Slime
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     | Fire        | Ice             |
 
-Actions:
-- (Cycling)
+Actions (Cycling):
 - Gain 4 Block.
 - Gain 2 Block.
 - Nothing.
 - Lose 8 Health and deal 20 Fire damage.
 
 ### Royal Slime
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 50     | Ice         | Fire            |
@@ -3522,17 +3479,15 @@ Decay Effect:
 Channels 5 Mana.
 
 #### The Ascendant
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 75     |             |                 |
 
-Action 1:
-- (Cycling)
+Action 1 (Cycling):
 - Gain 8 Block.
 - Gain 8 Block.
 - Nothing.
-- Deal **4\*X** Fire damage, where **X** is the number of Mana accumulated by the Ascendant.
+- Deal **4\*X** Fire damage, where **X** is the number of Mana Accumulated by the Ascendant.
 
 Action 2:
 - 1-2: Deal 4 Fire damage.
@@ -3541,8 +3496,8 @@ Action 2:
 
 #### Encounter Modifiers
 
-The Ascendant gains 4 Block for each Mana they accumulate each turn.
-Gain 2 Stress every time the Ascendant successfully resolves a spell.
+The Ascendant gains 4 Block for each Mana they Accumulate each turn.
+Gain 2 Stress every time the Ascendant successfully Resolves a spell.
 
 Decay:
 - 18 turns
@@ -3561,11 +3516,6 @@ Decay Effect:
 
 
 
-Fire 2
-Earth 4 (3)
-Ice 3 (2)
-Lightning 3
-
 ## Bosses
 
 
@@ -3575,19 +3525,17 @@ Lightning 3
 
 Channels 6 Mana.
 
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 120    | Lightning   | Earth           |
+| 150    | Lightning   | Earth           |
 |        |             | Ice             |
 
-Action 1:
-- (Cycling)
-- Gain 6 Block.
-- Gain 6 Block.
-- Gain 6 Block.
-- Force player to discard one Skill Card.
-  Take **X\*8** Lightning damage where **X** is the total Mana cost of the discarded card.
+Action 1 (Cycling):
+- Deal 2 Lightning damage.
+- Deal 4 Fire damage.
+- Deal 8 Lighting damage.
+- Gain 16 Block.
+- Take **X\*10** Lightning damage, where **X** is the number of Skill cards in hand.
   Take 8 Stress damage if no Skill cards are in hand.
 
 Action 2:
@@ -3598,8 +3546,9 @@ Action 2:
 
 #### Encounter Modifiers
 
-The Pale King cannot lose more than 20 Health in a single turn.
-Whenever the Pale King loses 15 or more Health in one turn, reset the cycling action to the first state.
+Damaging Skills are placed into Casting Queue instead of activating instantly when played.
+Skills that reach the end of the Casting Queue are activated twice.
+Whenever the Pale King loses 20 or more Health in one turn, reset the cycling action to the first state.
 
 Decay:
 - 20 turns
@@ -3618,17 +3567,16 @@ Decay Effect:
 
 Channels 6 Mana.
 
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 120    | Ice         | Fire            |
 |        |             | Lightning       |
 
-Action 1:
-- (Cycling)
-- Shuffle 1 Hex into Combat deck.
+Action 1 (Cycling):
+- Gain 10 Block.
+- Gain 10 Block.
 - Heal **X/2** Health, where **X** is the Player's Stress.
-- Deal **X** Ice damage, where **X** is the Player's Stress.
+- Deal **X+10** Ice damage, where **X** is the Player's Stress.
 
 Action 2:
 - 1-2: Gain 2 Stress.
@@ -3637,7 +3585,7 @@ Action 2:
 
 #### Encounter Modifiers
 
-Gain 2 Stress every turn.
+Gain 1 Stress every turn.
 Heal 1 Stress for each Ice Mana you Consume when activating a Skill.
 Upon casting a spell of Primary Damage Type Fire or Lightning, heal 5 Stress.
 
@@ -3656,14 +3604,12 @@ Decay Effect:
 
 Channels 6 Mana.
 
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 120    | Fire        | Earth           |
 |        |             | Lightning       |
 
-Action 1:
-- (Cycling)
+Action 1 (Cycling):
 - Gain 6 Block.
 - Gain 6 Block.
 - Gain 6 Block.
@@ -3671,13 +3617,14 @@ Action 1:
   Gain 8 Stress if no such cards are in hand.
 
 Action 2:
-- 1-2: Shuffle 1 Bleed into Combat deck.
+- 1-2: Shuffle 1 Bleeding into Combat deck.
 - 3-4: Shuffle 1 Burn into Combat deck.
 - 5-6: Shuffle 1 Hex into Combat deck.
 
 #### Encounter Modifiers
 
 Draw an additional card each turn.
+Shuffle a Bleeding into Combat deck whenever you take damage from The Endless Tide.
 Whenever you exhaust a Status card, draw a card.
 Whenever you exhaust 5 Status cards, gain 1 Phantasmal.
 Phantasmal is not removed from damage applied by Status cards.
@@ -3697,14 +3644,12 @@ Decay Effect:
 
 Channels 5 Mana.
 
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 120    |             | Lightning       |
+| 135    | Earth       | Lightning       |
 |        |             | Ice             |
 
-Action 1:
-- (Cycling)
+Action 1 (Cycling):
 - Take 4 Stress damage if...
 - Take 16 **X** damage if...
 
@@ -3718,7 +3663,6 @@ Action 2:
 - 1-3: Deal 4 Fire Damage and gain 8 Block.
 - 4-5: Deal 8 Earth Damage.
 - 6: Gain 1 Phantasmal.
-
 
 #### Encounter Modifiers
 
@@ -3736,15 +3680,13 @@ Decay Effect:
 
 Channels 12 Mana. Cast Speed 2.
 
-|        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 120    |             | Fire            |
 |        |             | Earth           |
 
 
-Action 1:
-- (Cycling)
+Action 1 (Cycling):
 - Gain 6 Block.
 - Gain 6 Block.
 - Gain 6 Block.
@@ -3754,7 +3696,6 @@ Action 2:
 - 1-2: Deal 6 Ice Damage.
 - 3-4: Deal 6 Lightning Damage.
 - 5-6: Shuffle 1 Hex into Combat deck.
-
 
 #### Encounter Modifiers
 
@@ -3777,8 +3718,45 @@ Decay Effect:
 
 ### The Annihilating Light
 
+Channels 6 Mana.
+
+| Health | Resistances | Vulnerabilities |
+| ------ | ----------- | --------------- |
+| 100    | All         |                 |
 
 
+Action 1 (Cycling):
+- Gain 8 Block.
+- Gain 8 Block.
+- Deal 4 Stress damage.
+- Deal **(X+5)\*2** Fire damage, where **X** is the Player's Stress.
+
+Action 2:
+- 1-2: Shuffle 1 Burn into Combat deck.
+- 3-4: Shuffle 1 Sapped into Combat deck.
+- 5-6: Deal 2 Stress damage.
+
+#### Encounter Modifiers
+
+Every time you play a Skill, heal 2 Stress.
+Every time you draw a Status or Curse card, gain 2 Stress.
+
+Whenever the Annihilating Light loses 20 or more Health in one turn, reset their cycling action to the first state.
+
+While your Stress is 8 or lower:
+- Heal 10 Health every turn.
+- The Annihilating Light gains permanent Phantasmal.
+
+While your Stress is 12 or higher:
+- Take double damage.
+- Deal double damage.
+
+Decay:
+- 24 turns
+
+Decay Effect:
+- Can no longer remove stress.
+- The Annihilating Light now performs the last cycling action every turn.
 
 
 
@@ -4014,16 +3992,17 @@ Decay Effect:
 
 ### Roku's Basilisk
 "Impossible escape."
-- Whenever a Spell Misfires, instantly rechannel the last three Mana accumulated by the Misfired Spell.
+- Whenever a Spell Misfires, instantly rechannel the last three Mana Accumulated by the Misfired Spell.
 
 ### Celestial Chains
 "Disquieting whispers of writhing pain, tempered by steel."
 - Draw two additional cards per turn.
-- You can channel one additional mana per turn.
-- Take 1 Damage for each Mana channelled past 3.
+- You can channel one additional Mana per turn.
+- Take 1 damage every time you channel Mana.
 
 ### Soul Mantle
 "While victory and defeat are decided by tacticians, living and dying will always lay in the realm of warriors."
+- Gain 4 Ward whenever you kill an enemy.
 - Whenever you kill an enemy, heal 4 Health and draw three Skill cards.
 
 ### Dawn's Embrace
@@ -4034,8 +4013,9 @@ Decay Effect:
 
 ### The Hanged Man
 "A perspective of sacrifice unveils untold wisdom."
-- Whenever you take damage during combat, channel one Mana of the primary damage type of the damage source and Accumulate 1 Mana.
+- You may spend Health in place of Mana for skills, at a conversion rate of 10 Health per 1 Mana.
 - At the start of combat, draw 1 additional card for each 10 Health missing.
+- Whenever your hand is empty, draw 3 cards.
 
 ### Lightning Coil
 "Embrace the storm, do not resist, and let it freely flow through you."
@@ -4075,8 +4055,8 @@ Decay Effect:
 
 ### Infinite Loop
 "The end is never the end is never the end is never the end is..."
-- At the beginning of combat, roll a D20 and delete a Rune tile.
-- Each turn, the first time your Spell Pointer would misfire due to misnavigation, gain a Delta transition.
+- Draw an additional card each turn.
+- Gain +2 to maximum hand size.
 
 ### Langford's Fractal
 "The raging storm of mana contained within lies nonetheless in perfect balance."
@@ -4086,38 +4066,40 @@ Decay Effect:
 
 ### Warped Timepiece
 "Despite the worn and twisted glass, the sand flows through with nervous regularity."
-- At the beginning of combat, mark one Rune tile of your choice. Once per combat, you may teleport your Spell Pointer to the marked Rune tile.
+- At the beginning of combat, mark one Rune tile of your choice.
+- Once per spell, you may teleport your Spell Pointer to the marked Rune tile.
+- The first time you reach Death's Door each combat, heal to half Health and set Stress to 16.
 
 ### Sacrificial Heart
 "The hunger only grows."
-- Draw an additional card each turn.
-- Gain +2 to maximum hand size.
+- At the beginning of combat, roll a D20 and delete a Rune tile.
+- Enemy spells now Misfire from misnavigations into the missing tile.
 
 ### Gödelian Sigil
 "Its cryptic inscriptions defy finite comprehension."
 - At the beginning of combat, select two Rune tiles to quotient together. Spell pointers treat the two tiles as the same, and transitions out of either tile may be chosen at will.
-  - You may choose to change these connected tiles instead of rotating two tiles (as per normal rules).
+- You may choose to change these connected tiles instead of rotating two tiles (as per normal rules).
 
 ### Möbius Chain
 "A chain of infinite twists, trapping its bearer in paradoxical loops."
-- Once per turn, you may move one Spell Pointer diagonally between Rune tiles without Accumulating Mana. Gain 1 Stress every time this ability is used.
+- At the beginning of combat, select an element. All Hazards of that element are quotiented together.
+- At the end of your turn, you may select a new element. This ability has a cooldown of 2 turns.
 
 ### Pathfinder’s Compass
 "Its needle never points north, only toward possibility."
-- At the beginning of your turn, you may mark a Rune tile. This ability has a cooldown of 2 turns.
-- All adjacent tiles become connected to it via generic transitions (i.e. any Mana type) between any of these tiles.
-- Mana taken by these transitions is discarded rather than Accumulated.
-- The mark is removed at the end of your turn.
+- Once per turn, you may force an enemy to take a transition regardless of Mana type.
+  Mana is still Accumulated when this ability is used.
+- Whenever you activate this ability, you cannot move your Spell Pointer this turn.
 
 ### Eternity's End
 "The cycle of endings begins anew."
-- Once per combat, when reduced to 0 Health, revive with 50% HP and instantly Resolve your current Spell.
-- Set Stress to 15 when activated.
+- Whenever you gain Stress, heal 4 Health.
+- Whenever you draw a Curse, gain 1 Resistance.
 
 ### Amulet of Yendor
 "It is said to possess powers which mere mortals can scarcely comprehend, let alone utilize."
-- At the beginning of combat, select an element. All Hazards of that element are quotiented together.
-- At the end of your turn, you may select a new element. This ability has a cooldown of 2 turns.
+- Once per turn, you may decrease one enemy intent by up to 3.
+- You cannot gain Block unless you consume Fire or Lightning Mana that turn.
 
 ### The Red Book
 "The cursed grimoire seeks not to be understood, but obeyed."
