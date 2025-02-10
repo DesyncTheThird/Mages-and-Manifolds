@@ -353,9 +353,9 @@ Upon a Misfire, the caster takes half the damage of the Misfired Spell (rounded 
 ## Damage Resistance and Vulnerability
 Enemies and players take **half** damage (rounded up) from Resisted damage types, and **double** damage (rounded down) from Vulnerabilities.
 
-[Resistance](#resistance) and [Vulnerability tokens](#vulnerable) apply the associated effect for **all** damage types.
+[Resistance](#resistance) and [Vulnerability tokens](#vulnerable) apply the associated effect for **all** damage types (apart from [Void damage](#void-mana), which ignores all Resistances and Vulnerabilities).
 
-If you are Vulnerable and Resistant to the same damage type, they cancel out and no damage multipliers are applied. Having multiple sources of Vulnerability and Resistance do not have additional effect, e.g. if you are on a [shattered](#shattered-earth) tile and have 5 Resistance tokens, the two effects simply cancel out.
+If you are Vulnerable and Resistant to the same damage type, they cancel out and no damage multipliers are applied. Having multiple sources of Vulnerability and Resistance do not have additional effect, e.g. if you are on a [Shattered](#shattered-earth) tile and have any positive number of Resistance tokens, the two effects simply cancel out.
 
 
 
@@ -380,7 +380,9 @@ The leftmost enemy acts first, before proceeding rightwards.
 
 ### Decay
 
-Each combat has a *Decay Counter*, and some additionally have a *Decay effect*. If the turn counter is equal to the Decay Counter, activate the Decay effect at this point.
+Each combat has a *Decay Counter*, and some additionally have a *Decay effect*.
+
+If the turn counter is equal to the Decay Counter, activate the Decay effect at this point.
 
 While Decay is active, gain 1 Stress every turn.
 
@@ -395,9 +397,9 @@ While Decay is active, gain 1 Stress every turn.
 Void Mana is a potent but dangerous type of Mana:
 - Void Mana can take any transition.
 - Mana further in the Casting Queue than a Void Mana cannot be consumed for Skills.
-- Ending a turn on an accepting tile with a Void Mana channelled instantly causes a Misfire.  
-- Misfires with a Void Mana channelled cause an additional Stress.
-- Unless specified otherwise, all enemies are Vulnerable to Void damage.
+- Misfires with cause an additional Stress per Void Mana channelled/accumulated.
+- Void damage bypasses Block and Ward.
+- Void damage ignores Resistances and Vulnerabilities.
 
 
 ## Accumulation
@@ -441,9 +443,9 @@ Upon accumulating 10 total Stress, your hero will be *tested* and gain a random 
 2.  Heal 2 Health, gain 1 Phantasmal.
 3.  Gain 1 Vulnerable.
 4.  Channel three Mana from hand. If Mana is not available, remove two Health for each  Mana deficit.
-5.  Scorch three random Rune tiles and double cast speed for next turn.
-6.  Flood two random Rune tiles and channel 2 Lightning mana.
-7.  Shock two random Rune tiles and channel 2 Ice mana.
+5.  Scorch three random Rune tiles and double Cast Speed for next turn.
+6.  Flood two random Rune tiles and channel all Lightning Mana from hand.
+7.  Shock two random Rune tiles and channel all Ice Mana from hand..
 8.  Warp two random Rune tiles.
 9.  Exhaust your next Skill card.
 10. Gain one Curse.
@@ -950,7 +952,7 @@ Cost:
 - 3 Fire Mana
 - 1 Generic Mana
 
-### The Rising Sun
+### Daybreak
 "The sun always rises."
 - At the end of your next turn, deal 12 Fire damage to all enemies.
 - Skip your next turn.
@@ -958,7 +960,7 @@ Cost:
 Cost:
 - 4 Fire Mana
 
-### Daybreak
+### Holy Light
 "A fleeting respite before the next storm."
 - Heal 10 Health.
 - Gain 4 Ward.
@@ -1206,7 +1208,7 @@ Cost:
 "Each gear turns in perfect harmony, a machine of endless precision and relentless purpose."
 - Gain 1 Cast Speed for the rest of combat.
 - Gain 1 Draw per turn for the rest of combat.
-- Misfires cause 4 additional stress for the rest of combat..
+- Misfires cause 4 additional stress for the rest of combat.
 - Exhaust.
 
 Cost:
@@ -1364,7 +1366,7 @@ Cost:
 ### Frost Nova
 "A sudden pulse of biting cold washes forth, stopping even the most ferocious advances."
 - Deal 6 Ice damage to all enemies.
-- Reduce enemy Cast Speed by 2 this turn.
+- Reduce enemy Cast Speed to 0 this turn.
 
 Cost:
 - 3 Ice Mana
@@ -1425,6 +1427,7 @@ Cost:
 ### Aegis
 "The earth shields all who stand firm upon it."
 - Gain 2 Ward.
+- Heal 2 Stress.
 - Gain 12 Block.
 
 Cost:
@@ -1488,7 +1491,7 @@ Cost:
 "A hair's breadth can mean the difference between triumph and defeat."
 - Gain 10 Block.
 - Discard 1 Card.
-- If you do not take damage this turn, heal 1 Stress.
+- If you do not lose any Health this turn, heal 4 Stress.
 
 Cost:
 - 2 Generic Mana
@@ -1620,14 +1623,15 @@ Cost:
 ### Blessing
 "Divine strength flows through your veins."
 - Heal 2 Health.
-- Gain 2 Ward.
+- Heal 3 Stress.
 
 Cost:
-- 2 Ice Mana
+- 1 Ice Mana
 
 ### Repair
 "The body will endure."
 - Heal 2 Health.
+- Heal 2 Stress.
 - Remove an elemental Hazard from the current tile.
 
 Cost:
@@ -1636,7 +1640,7 @@ Cost:
 
 ### Icicle Burst
 "A vicious volley, sharp and precise."
-- Deal 1 Ice damage to all enemies.
+- Deal 2 Ice damage to all enemies.
 
 Cost:
 - 1 Ice Mana
@@ -1645,6 +1649,7 @@ Cost:
 "Rippling power surges forth."
 - Deal 2 Ice damage to one enemy.
 - Decrease one enemy Intention by up to 2.
+- Heal 2 Stress.
 
 Cost:
 - 1 Ice Mana
@@ -1671,7 +1676,7 @@ Cost:
 
 ### Arc
 "A shocking chain of electricity."
-- Deal 2 Lightning damage to an enemy.
+- Deal 3 Lightning damage to an enemy.
 - For each Lightning Mana used to activate this Skill, hit one additional enemy.
 - If only Lightning Mana is used, Shock the tile under the enemy Spell Pointer.
 
@@ -1701,7 +1706,7 @@ Cost:
 - Channel 1 Lightning mana.
 
 Cost:
-- 3 Lightning Mana
+- 2 Lightning Mana
 
 ### Unleash
 "Power without restraint."
@@ -1723,6 +1728,7 @@ Cost:
 ### Bulwark
 "An impenetrable defense."
 - Gain 5 Ward.
+- Heal 2 Stress.
 - Channel 1 Earth Mana.
 
 Cost:
@@ -1756,10 +1762,10 @@ Cost:
 ### Constriction
 "Strength suffocates as it protects."
 - All enemies gain 1 Resistance.
-- Reduce enemy Cast Speed by 2 this turn.
+- Reduce enemy Cast Speed to 0 this turn.
 
 Cost:
-- 3 Earth Mana
+- 2 Earth Mana
 
 
 
@@ -1771,8 +1777,9 @@ Cost:
 - 1 Generic Mana
 
 ### Redirection
-"Momentum is its own kind of magic"
+"Momentum is its own kind of magic."
 - Reroll one enemy Intention.
+- Heal 2 Stress.
 
 Cost:
 - 1 Generic Mana
@@ -1782,7 +1789,7 @@ Cost:
 - The Spell Pointer continues in the same direction for one more tile, regardless of available transitions.
 
 Cost:
-- 2 Generic Mana
+- None.
 
 ### Rift
 "Tear through reality itself."
@@ -1793,7 +1800,8 @@ Cost:
 
 ### Anticipate
 "Know your enemy, and you've already won half the battle."
-- Decrease one enemy Intention by up to 2.
+- Decrease or increase one enemy Intention by up to 2.
+- Heal 2 Stress.
 
 Cost:
 - 1 Generic Mana
@@ -1803,7 +1811,7 @@ Cost:
 - Accumulate 2 Mana.
 
 Cost:
-- 2 Generic Mana
+- 1 Generic Mana
 
 
 
@@ -1834,6 +1842,7 @@ Cost:
 
 ### Mend (x2)
 - Heal 2 Health.
+- Heal 1 Stress.
 
 Cost:
 - 1 Ice Mana
@@ -1847,6 +1856,7 @@ Cost:
 
 ### Focus (x1)
 - Accumulate 1 Mana.
+- Heal 2 Stress.
 
 Cost:
 - 1 Generic Mana
@@ -3517,28 +3527,44 @@ Channels 5 Mana.
 | ------ | ----------- | --------------- |
 | 75     |             |                 |
 
-Actions:
-- 1-2: Deal 4 Fire damage.
-- 3-4: Heal 4 Health.
-- 5-6: Accumulate an additional Mana.
+Action 1:
+- (Cycling)
+- Gain 8 Block.
+- Gain 8 Block.
+- Nothing.
+- Deal **4\*X** Fire damage, where **X** is the number of Mana accumulated by the Ascendant.
 
+Action 2:
+- 1-2: Deal 4 Fire damage.
+- 3-4: Gain 4 Block.
+- 5-6: Accumulate an additional Mana.
 
 #### Encounter Modifiers
 
-The Ascendant gains 4 Block for each Mana accumulated each turn.
-Gain 1 Stress every time the Ascendant successfully resolves a spell.
+The Ascendant gains 4 Block for each Mana they accumulate each turn.
+Gain 2 Stress every time the Ascendant successfully resolves a spell.
 
 Decay:
 - 18 turns
 
 Decay Effect:
-- Heal all enemies 4 Health.
+- Gain 1 Stress.
 
 
 
 
 
 
+
+
+
+
+
+
+Fire 2
+Earth 4 (3)
+Ice 3 (2)
+Lightning 3
 
 ## Bosses
 
@@ -3674,7 +3700,7 @@ Channels 5 Mana.
 |        |             |                 |
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 120    |             | Earth           |
+| 120    |             | Lightning       |
 |        |             | Ice             |
 
 Action 1:
@@ -3683,14 +3709,14 @@ Action 1:
 - Take 16 **X** damage if...
 
 ...you do not Channel or Consume a **X** Mana this turn, where:
-- 1: **X** is Earth.
+- 1: **X** is Lightning.
 - 2: **X** is Ice.
 - 3-4: **X** is Fire.
-- 5-6: **X** is Lightning.
+- 5-6: **X** is Earth.
 
 Action 2:
-- 1-3: Deal 6 Fire Damage.
-- 4-5: Deal 8 Lightning Damage.
+- 1-3: Deal 4 Fire Damage and gain 8 Block.
+- 4-5: Deal 8 Earth Damage.
 - 6: Gain 1 Phantasmal.
 
 
@@ -3734,15 +3760,19 @@ Action 2:
 
 Shuffle any Mana Accumulated by the Zenith back into Mana deck.
 Enemy spells have no effect.
-If the Zenith Misfires, lose 40 Health.
-If the Zenith Resolves a Spell, lose 40 Health and gain 8 Stress.
+If the Zenith Misfires, you lose 40 Health.
+If the Zenith Resolves a Spell, you lose 40 Health and gain 8 Stress.
 Every time the Zenith loses 15 Health in a single turn, channel the top two Mana from the Mana deck into the Zenith's Spell Queue.
 
 Decay:
 - 20 turns
 
 Decay Effect:
-- The Zenith gains 2 Cast Speed.
+- The Zenith gains 1 Cast Speed.
+
+
+
+
 
 
 ### The Annihilating Light
