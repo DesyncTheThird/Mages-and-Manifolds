@@ -230,12 +230,12 @@ Add the following to your inventory:
 Draw 19 tiles from the Rune Deck and arrange them on the Rune board as labeled, in order. You may choose the rotation of each tile at will, apart from the *initial tiles* 11 and 17 (or if playing with 2 players, tiles 10, 12, and 17), whose transitions must not point off the board. If no rotation will facilitate this, redraw these tiles until this is possible.
 ```
          16   17   18
-      14    6    7   19
+      15    6    7   19
     14    5    1    2    8
       13    4    3    9
          12   11   10
 ```
-Roll a **D20** three times, and add the *Accepting* marker to the indicated tile. If the dice rolls 20, reroll two additional times.
+Roll a **D20** three times, and add the *Target* marker to the indicated tile. If the dice rolls 20, reroll two additional times.
 
 
 
@@ -267,7 +267,9 @@ After initial setup, the phases in a normal turn are as follows:
 
 ### Draw Phase
 
-Draw *three* cards total from your Mana and Combat decks (you may divide your draws however you like). Non-specific modifiers to draw affect this number (some modifiers will specify Mana or Skill draw).
+Draw *five* cards total from your Mana and Combat decks (you may divide your draws however you like). Non-specific modifiers to draw affect this number (some modifiers will specify Mana or Skill draw).
+
+If your Combat Deck is emptied, shuffle the Discard pile back into the Combat Deck.
 
 ### Channelling Phase
 If playing with 2 players, take your turns simultaneously.
@@ -275,6 +277,7 @@ If playing with 2 players, take your turns simultaneously.
 - If your initial tile is unoccupied, you may add a new Spell Pointer there. There may be up to 2 concurrent spells cast by the Player(s) at once.
 
 - Then, you may channel up to 3 Mana from your hand into any existing Casting Queue. The 3 Mana may be distributed between Queues at will.
+
 
 
 ### Casting Phase
@@ -291,11 +294,13 @@ The following may be performed in any order.
     and you play a Skill that requires 1 Fire and 1 Ice Mana, then you must take the newest Mana possible:
 
        (Head) `[Fire - Ice - Lightning - Earth]` (Tail)
-   Consumed Mana is discarded and not Accumulated.
+    Consumed Mana is discarded and not Accumulated.
+    
+    Resolve [enemy defensive actions](#enemy-actions) before applying damage from Skills.
 
 
 
-- For each Cast Speed, collect one Mana from the head of the Casting Queue into an *accumulation stack* and move the associated Spell Pointer along transitions accordingly. Perform these actions separately for each Spell Pointer.
+- For each Cast Speed, collect one Mana from the head of the Casting Queue into an *Accumulation Stack* and move the associated Spell Pointer along transitions accordingly. Perform these actions separately for each Spell Pointer.
 
   Spell Pointers cannot be partially resolved. That is, if your Cast Speed is 2, then you cannot move a Pointer one tile, play a Skill, then finish moving the Pointer after.
 
@@ -303,10 +308,11 @@ The following may be performed in any order.
   
   Otherwise, the Spell [*Misfires*](#Misfires). If two Spell Pointers collides, both Spells Misfire.
 
-
 Whenever your last Spell Resolves or Misfires, instantly start a new Spell and channel the top 3 Mana from your Mana deck.
 
-#### Resolution
+
+
+#### Spell Phase
 
 Some special effects may also instantly Resolve Spells outside of the normal Accepting Tile process. Whenever this happens, all Queued Mana counts as Accumulated.
 
@@ -326,14 +332,9 @@ When a Spell successfully resolves, it deals damage to **one** enemy as follows:
    | 7                | 12     |
    | 8+               | 16     |
 
-2. Deal this much damage as the type of the last Mana Accumulated (the *Primary Damage Type*);
-3. Deal half as much damage (rounded down) as the type of the penultimate Mana Accumulated (the *Secondary Damage Type*).
-4. If the Secondary Damage Type coincides with the Primary Damage Type, additionally apply the associated elemental [Hazard](#Hazards) to your current tile.
-5. If the Spell was a Misfire, halve the total damage.
+2. Deal this much damage as the type of the final Mana Accumulated to **one enemy**;
 
-Process [enemy defensive actions](#enemy-actions) before applying damage.
-
-If a enemy card has requirements that may be met mid-cast, track them with a counter so you don't forget. Clear all counters whenever a Spell Resolves.
+Resolve [enemy defensive actions](#enemy-actions) before applying damage.
 
 
 
@@ -476,7 +477,7 @@ Enemies do not take damage from Hazards, but Resistance and Vulnerability modifi
 Hazards are removed at the end of combat.
 
 #### Scorched (Fire):
-Upon *entering* a Scorched tile, take **6-X** Fire damage, where **X** is the number of channelled Ice Mana.
+Upon *entering* a Scorched tile, take **8-X** Fire damage, where **X** is the number of Accumulated Ice Mana.
 
 While on a Scorched tile, the caster becomes
 - Vulnerable to Lightning damage.
@@ -487,18 +488,19 @@ If a Fire transition is used to *leave*, the Hazard spreads to the next tile the
 
 
 #### Flooded (Ice):
-Upon *entering* a Flooded tile, take **X** Lightning damage, where **X** is the number of channelled Lightning Mana. If a Lightning transition is used to *enter or exit* a Flooded tile, the Spell instantly Misfires.
+Upon *entering* a Flooded tile, take **X** Lightning damage, where **X** is the number of Accumulated Lightning Mana.
 
 While on a Flooded tile, the caster becomes:
 - Vulnerable to Earth damage.
 - Resistant to Fire damage.
 
 If a Fire transition is used to *leave* a Flooded tile, the Hazard is removed.
+If a Lightning transition is used to *leave*, the Spell instantly Misfires.
 If an Ice transition is used to *leave*, the Hazard spreads to the next tile the Spell Pointer moves to.
 
 
 #### Shocked (Lightning):
-Upon *entering* a Shocked tile, take **X+4** Lightning damage, where **X** is the number of channelled Ice Mana.
+Upon *entering* a Shocked tile, take **2\*X** Lightning damage, where **X** is the number of Accumulated Ice Mana.
 
 While on a Shocked tile, the caster becomes:
 - Vulnerable to Ice damage.
@@ -679,8 +681,8 @@ Ascension effects are cumulative.
 7.  Add one Looming Fate card into your Combat deck. This card cannot be removed.
 8.  At the beginning of each dungeon, roll a **D20** and remove that Rune from the Rune board. If the dice rolls 20, reroll once.
 9.  Infest one Rune at the beginning of each dungeon. This tile cannot be cleansed.
-10. Convert enemy secondary damage type to Void.
-11. Enemy Spells now deal one additional Stress.
+10. Enemy Spells now deal one additional Stress.
+11. When drafting, reveal one fewer card.
 12. Draw one fewer card at the start of each combat.
 
 
@@ -1173,7 +1175,7 @@ Cost:
 
 ### Eternity
 "Time halts at your command, freezing the battlefield in an eternal moment of stillness."
-- View the top 5 cards of your Combat deck.
+- View the top 5 Cards of your Combat deck.
 - Enemies do not perform Intention actions this turn.
 - Exhaust.
 
@@ -1243,7 +1245,7 @@ Cost:
 - Accumulate 5 Mana.
 - Gain 3 Vulnerable.
 - Set all enemy Intentions to 6.
-- Exhaust
+- Exhaust.
 
 Cost:
 - None
@@ -1252,6 +1254,7 @@ Cost:
 "In aeons past, three names bestowed, but only one deferred,
 Abandoned, lost, deceived; at last, I am the fractured Third."
 - Your next Spell targets all enemies.
+- If there is only one enemy, activate your next Spell thrice.
 - Exhaust.
 
 Cost:
@@ -1287,7 +1290,7 @@ Cost:
 - 4 Fire Mana
 
 ### Blaze
-"The brightest flame cast the deepest shadows."
+"The brightest flames cast the deepest shadows."
 - Warp your current tile.
 - Scorch a tile of your choice.
 
@@ -1302,13 +1305,13 @@ Cost:
 Cost:
 - 3 Fire Mana
 
-### Scorch
+### Incinerate
 "All it takes is the right moment."
 - Scorch the current tile.
-- Channel 3 Fire Mana.
+- Shuffle a Burn into Combat Deck.
 
 Cost:
-- 2 Generic Mana.
+- 3 Fire Mana.
 
 ### Flame Nova
 "In its wake, only embers remain."
@@ -1341,7 +1344,7 @@ Cost:
 
 ### Unholy Mending
 "Renewal is always within reach, if one is willing to bend a few rules."
-- Heal 2 Health
+- Heal 2 Health.
 - Gain 10 Ward.
 - Gain 4 Stress.
 
@@ -1358,7 +1361,7 @@ Cost:
 Cost:
 - 3 Ice Mana
 
-### Rejuvinate
+### Rejuvenate
 "The cold winds carry more than icy ruin."
 - Remove an elemental Hazard from the current tile.
 - Heal 2 Stress.
@@ -1380,14 +1383,14 @@ Cost:
 <!-- Lightning -->
 ### Discharge
 "The energy of a thousand storms, released in a single blinding instant."
-- Deal D10 Lightning damage to one enemy.
-- If this Skill deals 8 or more damage, draw 2 Mana cards.
+- Deal **D10** Lightning damage to one enemy.
+- If this Skill deals 8 or more damage, draw 2 Mana Cards.
 
 Cost:
 - 3 Lightning Mana
 
 ### Finesse
-"With a delicate touch and a sharp mind, even chaos can be guided into order"
+"With a delicate touch and a sharp mind, even chaos can be guided into order."
 - Accumulate 2 Mana.
 - Draw 2 Cards.
 - Discard 2 Cards.
@@ -1403,7 +1406,7 @@ Cost:
 - **X** Lightning Mana
 
 ### Volt Driver
-"Harness the storm and drive it forward."
+"Harness the storm, drive it forward."
 - Scorch one tile adjacent to the current tile.
 - Deal 6 Lightning damage to one enemy.
 
@@ -1412,7 +1415,7 @@ Cost:
 - 2 Generic Mana
 
 ### Tempest Ward
-"A shield of light and thunder."
+"A wall of light and thunder."
 - Gain 10 Block.
 - If attacked this turn, deal 4 Lightning damage to all enemies.
 
@@ -1474,7 +1477,7 @@ Cost:
 - Deal **X** Earth damage to one enemy.
 
 Cost:
-- 2 Generic Mana
+- 1 Generic Mana
 - **X** Earth Mana
 
 ### Earthquake
@@ -1532,7 +1535,7 @@ Cost:
 
 ### Arcane Battery
 "Overflowing with latent energy."
-- Channel 2 Void Mana
+- Channel 2 Void Mana.
 
 Cost:
 - 2 Lightning Mana
@@ -1540,12 +1543,12 @@ Cost:
 ### Surge
 "The tides of power rise swiftly and without warning."
 - Accumulate 2 Mana.
-- The first time a Spell would Misfire this turn due to misnavigation, instantly use a Delta transition.
+- Draw 2 Mana cards.
 
 Cost:
-- 4 Generic Mana
+- 3 Generic Mana
 
-### Beserk
+### Berserk
 "Abandon restraint and unleash chaos."
 - Accumulate 2 Mana.
 - Lose 2 Health.
@@ -1566,13 +1569,13 @@ Cost:
 ### Magic Missile
 "The first spell a young mage learns."
 - Deal 3 Fire damage to one enemy.
-- If cast using Fire mana, deal 3 Fire damage to all enemies.
+- If cast using only Fire mana, deal 3 Fire damage to all enemies.
 
 Cost:
 - 2 Generic Mana
 
 ### Combust
-"A simple yet devastating conjuration."
+"Nothing sparks fear like fire."
 - Deal 3 Fire damage to one enemy.
 - Scorch your current tile.
 
@@ -1582,7 +1585,7 @@ Cost:
 ### Ignite
 "A wildfire is started by a single spark."
 - Scorch the tile under the enemy Spell Pointer.
-- Discard 1 Card.
+- Discard 1 card.
 
 Cost:
 - 1 Fire Mana
@@ -1612,7 +1615,8 @@ Cost:
 
 Cost:
 - 1 Fire Mana
-- 2 Generic Mana
+- 1 Lightning Mana
+- 1 Generic Mana
 
 
 
@@ -1681,7 +1685,7 @@ Cost:
 
 ### Arc
 "A shocking chain of electricity."
-- Deal 3 Lightning damage to an enemy.
+- Deal 3 Lightning damage to one enemy.
 - For each Lightning Mana used to activate this Skill, hit one additional enemy.
 - If only Lightning Mana is used, Shock the tile under the enemy Spell Pointer.
 
@@ -1716,7 +1720,7 @@ Cost:
 ### Unleash
 "Power without restraint."
 - Deal **3\*X** Lightning damage to one enemy.
-- If the enemy is on a Flooded tile, ignore Lightning Resistance.
+- If the enemy is on a Flooded tile, ignore Resistances.
 
 Cost:
 - 1 Generic Mana
@@ -1759,10 +1763,11 @@ Cost:
 
 ### Concentration
 "The key to success lies in focus."
-- Deal 5 Earth damage.
+- Deal 6 Earth damage to one enemy.
+- Accumulate 1 Mana.
 
 Cost:
-- 2 Earth Mana
+- 1 Earth Mana
 
 ### Constriction
 "Strength suffocates as it protects."
@@ -1805,7 +1810,7 @@ Cost:
 
 ### Anticipate
 "Know your enemy, and you've already won half the battle."
-- Decrease or increase one enemy Intention by up to 2.
+- Increase or decrease one enemy Intention by up to 2.
 - Heal 2 Stress.
 
 Cost:
@@ -2673,8 +2678,7 @@ Channels 6 Mana.
 #### Skeleton Mage (Fire)
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 10     | Fire        | Earth           |
-|        |             | Ice             |
+| 10     |             | Ice             |
 
 Actions:
 - 1-2: Deal 2 Fire damage.
@@ -2684,7 +2688,7 @@ Actions:
 #### Skeleton Mage (Lightning)
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 10     | Lightning   | Earth           |
+| 10     |             | Earth           |
 
 Actions:
 - 1-2: Deal 2 Lightning damage.
@@ -2694,8 +2698,7 @@ Actions:
 #### Skeleton Mage (Ice)
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 10     | Ice         | Earth           |
-|        |             | Fire            |
+| 10     |             | Fire            |
 
 Actions:
 - 1-2: Deal 2 Ice damage.
@@ -2704,7 +2707,7 @@ Actions:
 
 #### Encounter Modifiers
 
-Whenever the enemy successfully resolves a Spell, apply a Hazard matching the Primary Damage Type to a random tile.
+Whenever the enemy successfully resolves a Spell, apply a Hazard matching the Damage type of the spell to a random tile.
 
 Decay:
 - 8 turns
@@ -2724,7 +2727,7 @@ Channels 4 Mana.
 #### Skeleton Guard
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 15     | Earth       | Lightning       |
+| 15     |             | Lightning       |
 
 Actions:
 - 1-2: Deal 2 Earth damage.
@@ -2734,7 +2737,7 @@ Actions:
 #### Skeleton Knight
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 15     | Earth       | Lightning       |
+| 15     |             | Lightning       |
 
 Actions:
 - 1-2: Deal 4 Fire damage.
@@ -2771,7 +2774,7 @@ Channels 4 Mana.
 #### Slime
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 10     | Ice         | Fire            |
+| 10     |             | Fire            |
 
 Actions:
 - 1-4: Deal 1 Ice damage.
@@ -2780,7 +2783,7 @@ Actions:
 #### Slime
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 10     | Ice         | Fire            |
+| 10     |             | Fire            |
 
 Actions:
 - 1-5: Deal 1 Ice damage.
@@ -2789,7 +2792,7 @@ Actions:
 #### Large Slime
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 15     | Ice         | Fire            |
+| 15     |             | Fire            |
 
 Actions:
 - 1-4: Deal 2 Ice damage.
@@ -2816,7 +2819,7 @@ Channels 4 Mana.
 #### Slime
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 10     | Ice         | Fire            |
+| 10     |             | Fire            |
 
 Actions:
 - 1-4: Deal 1 Ice damage.
@@ -2825,7 +2828,7 @@ Actions:
 #### Slime
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
-| 10     | Ice         | Fire            |
+| 10     |             | Fire            |
 
 Actions:
 - 1-5: Deal 1 Ice damage.
@@ -2898,7 +2901,7 @@ Actions:
 
 Warp one Rune tile at beginning of combat.
 
-Upon casting a spell of Primary Damage Type **X**, all enemies Resist **X** until next Spell is resolved.
+Upon casting a spell of Damage Type **X**, all enemies Resist **X** until next Spell is resolved.
 
 Decay:
 - 10 turns
@@ -2920,7 +2923,6 @@ Channels 6 Mana.
 | 4      | All         |                 |
 
 Permanent Phantasmal.
-The Wraith does not take damage from environmental Hazards.
 
 Actions:
 - Deal 1 Ice damage.
@@ -3587,7 +3589,7 @@ Action 2:
 
 Gain 1 Stress every turn.
 Heal 1 Stress for each Ice Mana you Consume when activating a Skill.
-Upon casting a spell of Primary Damage Type Fire or Lightning, heal 5 Stress.
+Upon casting a spell of Damage Type Fire or Lightning, heal 5 Stress.
 
 Decay:
 - 20 turns
@@ -4019,7 +4021,7 @@ Decay Effect:
 
 ### Lightning Coil
 "Embrace the storm, do not resist, and let it freely flow through you."
-- Your secondary damage type is always Lightning.
+- Your Spell damage type is always Lightning.
 - Become immune to Shock.
 - Enemies cannot Resist Lightning damage.
 
@@ -4038,12 +4040,12 @@ Decay Effect:
 ### Abyssal Pearl
 "Stillness and flow converge in a balance of destruction and serenity."
 - Whenever you channel Ice mana, heal 2 Health.
-- Whenever you cast a Spell with primary or secondary type Ice, lose 4 Health and Warp the current tile.
+- Whenever you cast a Spell with Damage type Ice, lose 4 Health and Warp the current tile.
 - Once per turn, you may convert two adjacent channelled Ice mana into one Void mana.
 
 ### Petrified Heart
 "With a single strike, the ground quakes and crumbles beneath your enemies."
-- Whenever you cast a Spell with primary damage type Earth, Shatter the enemy's current tile.
+- Whenever you cast a Spell with Damage type Earth, Shatter the enemy's current tile.
 - Gain 4 Ward whenever you enter a Shattered tile.
 
 
