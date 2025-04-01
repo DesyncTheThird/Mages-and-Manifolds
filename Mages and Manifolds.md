@@ -410,13 +410,10 @@ The process of collecting Mana from a Casting Queue into a Spell.
 
 Distinct from *Consuming* Mana for Skills.
 
-## Epsilon/Delta/Omega Transitions
+## Epsilon/Delta Transitions
 An Epsilon transition allows a Spell Pointer to move to any tile without accumulating Mana.
 
 A Delta transition allows a Spell Pointer to move to an adjacent tile without accumulating Mana.
-
-An Omega transition allows a Spell Pointer to move to an adjacent tile, accumulating one Mana regardless of the type.
-
 
 ## Health
 Whenever your Health total reaches zero or less each combat, gain **Death's Door** and increase your Stress to **18+X**, where **X** is the number of times your character has been on Death's Door this combat.
@@ -826,7 +823,7 @@ Cost:
 - Gain 2 Stress every turn.
 
 Cost:
-- 3 Generic Mana or 1 Void Mana
+- 3 Generic Mana
 
 ### Visions
 "You see yourself fall, impaled by countless daggers."
@@ -835,12 +832,12 @@ Cost:
 - Weight 2
 
 Cost:
-- 3 Generic Mana or 1 Void Mana
+- 3 Generic Mana
 
 ### Remorse
 "The fires of guilt consumes you."
 - While this card is in hand, lose 2 Health every time Fire Mana is channelled.
-- Gain 2 Stress and discard this card when Ice or Void Mana is Accumulated.
+- Gain 2 Stress and discard this card when Ice Mana is Accumulated.
 - Cannot be played.
 
 This card is shuffled into your draw pile rather than discard pile.
@@ -874,7 +871,7 @@ This card is shuffled into your draw pile rather than discard pile.
 ### Tearing Wounds
 "Weaker and weaker still..."
 - While this card is in hand, lose 2 Health every time Ice Mana is channelled.
-- Gain 2 Stress and discard this card when Fire or Void Mana is Accumulated.
+- Gain 2 Stress and discard this card when Fire Mana is Accumulated.
 - Cannot be played.
 
 ### Haemophilia
@@ -932,7 +929,8 @@ Cost:
 ### Pillar of Light
 "You will stand out amongst the rest, a shining beacon of hope."
 - Deal 7 Fire damage to all enemies.
-- Channel 2 Fire Mana and 1 Void Mana.
+- Channel 2 Fire Mana.
+- Set all enemy Intentions to 6.
 - Gain 3 Stress.
 
 Cost:
@@ -940,7 +938,7 @@ Cost:
 
 ### Fallen Star
 "A fragment of the heavens descends, heralded by a piercing song of brilliance and ruin."
-- Deal 10 Fire damage to one enemy.
+- Deal 12 Fire damage to one enemy.
 - Scorch and Shatter the tile under the enemy Spell Pointer.
 - Lose all Ward.
 - Lose 8 Health.
@@ -949,7 +947,7 @@ Cost:
 - 4 Fire Mana
 
 ### Eclipse
-"The Hungering Darkness consumes all."
+"The hungering darkness consumes all."
 - Apply 1 Vulnerable to all enemies.
 - Warp every Flooded tile.
 - Channel 1 Fire Mana.
@@ -961,8 +959,8 @@ Cost:
 
 ### Daybreak
 "The sun always rises."
-- At the end of your next turn, deal 12 Fire damage to all enemies.
-- Skip your next turn.
+- At the end of your next turn, deal 8 Fire damage to all enemies.
+- You cannot gain Block until the end of your next turn.
 
 Cost:
 - 4 Fire Mana
@@ -981,17 +979,17 @@ Cost:
 
 ### Inferno
 "Spare nothing in your fury."
-- Deal 3 Fire damage to all enemies.
-- Repeat effect 2 additional times.
+- Deal 2 Fire damage to all enemies.
+- Activate this card 3 times.
 
 Cost:
-- 2 Fire Mana
+- 4 Fire Mana
 - 1 Generic Mana
 
 <!-- Ice -->
 
 ### Impervious
-"Your body freezes into unyielding armor, each shard of ice a testament to your defiance."
+"Your body freezes into unyielding armour, each shard of ice a testament to your defiance."
 - Gain 1 Phantasmal.
 - Gain 4 Ward.
 - If you have been on Death's Door this combat, gain 2 additional Phantasmal.
@@ -1039,13 +1037,13 @@ Cost:
 - Exhaust.
 
 Cost:
-- 3 Fire Mana
+- 3 Ice Mana
 - 2 Generic Mana
 
 ### Abyss
 "It calls to you with promises of power."
 - Warp every Scorched tile.
-- Channel 1 Void Mana.
+- Draw and immediately Channel 1 Mana.
 - Gain 1 Stress.
 
 Cost:
@@ -1057,22 +1055,24 @@ Cost:
 ### Dragon Arc
 "The storm dances between its prey, leaping from one to the next, never stopping, never tiring."
 - Deal 3 Lightning damage to one enemy.
-- Repeat D4 times.
+- Activate this card 3 times.
 
 Cost:
-- 3 Lightning Mana
+- 4 Lightning Mana
+- 1 Generic Mana
 
 ### Burst Salvo
 "Each strike is precise, a calculated barrage that leaves no room for error."
-- Channel 3 Lightning Mana.
-- Apply 1 Vulnerable to one enemy.
+- Apply 2 Vulnerable to one enemy.
+- Shock the tile under the enemy Spell Pointer.
+- Exhaust
 
 Cost:
-- 1 Ice Mana.
-- 1 Lightning Mana.
+- 1 Lightning Mana
+- 1 Ice Mana
 
 ### Zephyr
-"Lightning courses through the air, swift and unpredictable, as you channel its speed into your actions."
+"Lightning courses through the air, swift and unpredictable as you channel its speed into your actions."
 - Draw 3 Mana cards.
 - Accumulate 3 Mana.
 
@@ -1083,16 +1083,15 @@ Cost:
 "The skies tear open, a gaping maw spewing out tongues of wicked lightning, hungrily preparing its next meal."
 - Apply 1 Vulnerable to all enemies.
 - Gain 1 Vulnerable.
-- Channel 1 Void Mana.
-- Channel 4 Lightning Mana.
+- Channel 3 Lightning Mana.
 - Gain 4 Stress.
 
 Cost:
-- 3 Lightning Mana
-- 1 Void Mana
+- 4 Lightning Mana
+- 1 Generic Mana
 
 ### Transience
-"You are but a conduit for the storm’s energy, letting it flow freely before it burns you out."
+"You are but a conduit for the storm. Let it flow freely through your veins."
 - Accumulate 2 Mana.
 - Discard 2 Cards.
 - Draw 4 Cards.
@@ -1138,7 +1137,7 @@ Cost:
 - Exhaust.
 
 Cost:
-- 4 Earth Mana
+- 3 Earth Mana
 
 ### Citadel
 "A fortress rises beneath your feet, unyielding and eternal, protecting what must never fall."
@@ -1181,7 +1180,7 @@ Cost:
 
 Cost:
 - 3 Ice Mana
-- 2 Generic Mana
+- 1 Generic Mana
 
 ### Terminus Est
 "All paths converge."
@@ -1189,7 +1188,7 @@ Cost:
 - Can only be used when multiple enemies are alive.
 
 Cost:
-- 5 Generic Mana or 2 Void Mana
+- 4 Generic Mana
 
 ### Last Breath
 "A fleeting moment of defiance before the end."
@@ -1209,7 +1208,7 @@ Cost:
 - Exhaust.
 
 Cost:
-- 2 Void Mana.
+- 5 Generic Mana
 
 ### Clockwork
 "Each gear turns in perfect harmony, a machine of endless precision and relentless purpose."
@@ -1219,7 +1218,7 @@ Cost:
 - Exhaust.
 
 Cost:
-- 5 Generic Mana or 2 Void Mana
+- 4 Generic Mana
 
 ### Apotheosis
 "You ascend beyond mortal limits, the cost of power etched deeply into your very being."
@@ -1521,10 +1520,10 @@ Cost:
 ### Astral Rift
 "Space bends to your will."
 - Gain an Epsilon transition.
-- Channel 1 Void Mana.
+- Draw 2 Cards.
 
 Cost:
-- 3 Generic Mana
+- 2 Generic Mana
 
 ### Bifurcating Strike
 "Divide and conquer."
@@ -1535,7 +1534,7 @@ Cost:
 
 ### Arcane Battery
 "Overflowing with latent energy."
-- Channel 2 Void Mana.
+- Draw 3 Mana cards.
 
 Cost:
 - 2 Lightning Mana
@@ -1546,7 +1545,7 @@ Cost:
 - Draw 2 Mana cards.
 
 Cost:
-- 3 Generic Mana
+- 2 Generic Mana
 
 ### Berserk
 "Abandon restraint and unleash chaos."
@@ -1830,14 +1829,14 @@ Cost:
 
 ## Starting Cards (x15)
 
-### Flame (x2)
+### Flame (x1)
 - Deal 4 Fire damage to one enemy.
 
 Cost:
 - 1 Fire Mana.
 - 1 Generic Mana.
 
-### Spark (x2)
+### Spark (x1)
 - Deal 4 Lightning damage to one enemy.
 
 Cost:
@@ -1864,14 +1863,14 @@ Cost:
 Cost:
 - 1 Generic Mana
 
-### Focus (x1)
+### Focus (x2)
 - Accumulate 1 Mana.
 - Heal 2 Stress.
 
 Cost:
 - 1 Generic Mana
 
-### Delta (x1)
+### Delta (x2)
 - Move Spell Pointer to an adjacent tile without Accumulating Mana.
 
 Cost:
