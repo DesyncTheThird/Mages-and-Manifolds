@@ -363,11 +363,6 @@ If you are Vulnerable and Resistant to the same damage type, they cancel out and
 
 
 
-After a Spell successfully Resolves or misfires,
-
-immediately channel 3 Mana from the top of the Mana deck into a ne
-
-
 ### Enemy Actions
 
 After all Spells Resolve and Skills have been played, enemies finally perform the listed *Intention* action(s) on their card. (Defensive actions may be triggered earlier.)
@@ -422,8 +417,6 @@ Taking any damage while on Death's Door will kill your character and end the exp
 
 If your Health is healed back to a positive value, remove **Death's Door**.
 
-
-If your Health total reaches zero, your character dies and the adventure ends.
 
 ## Block
 - Temporary hitpoints that are removed at the end of each turn.
@@ -480,7 +473,7 @@ While on a Scorched tile, the caster becomes
 - Vulnerable to Lightning damage.
 - Resistant to Ice damage.
 
-If a Ice transition is used to *leave* a Scorched tile, the Hazard is removed.
+If an Ice transition is used to *leave* a Scorched tile, the Hazard is removed.
 If a Fire transition is used to *leave*, the Hazard spreads to the next tile the Spell Pointer moves to.
 
 
