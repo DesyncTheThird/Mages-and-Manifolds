@@ -2862,7 +2862,7 @@ Decay Effect:
 
 Channels 6 Mana.
 
-### Hooded Figure
+#### Hooded Figure
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     |             | All             |
@@ -2871,7 +2871,7 @@ Actions:
 - 1-4: Gain 4 Block.
 - 5-6: All enemies gain 4 Block.
 
-### Dark Cultist
+#### Dark Cultist
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     |             | All             |
@@ -2880,7 +2880,7 @@ Actions:
 - 1-4: Deal 1 Void damage.
 - 5-6: Gain 6 Block.
 
-### Corrupted Seer
+#### Corrupted Seer
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 30     |             | All             |
@@ -2909,7 +2909,7 @@ Decay Effect:
 
 Channels 6 Mana.
 
-### Wraith
+#### Wraith
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 4      | All         |                 |
@@ -2919,7 +2919,7 @@ Permanent Phantasmal.
 Actions:
 - Deal 1 Ice damage.
 
-### Plague Ghoul
+#### Plague Ghoul
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 20     |             | Fire            |
@@ -2928,7 +2928,7 @@ Actions:
 - 1-4: Deal 1 Ice damage.
 - 5-6: Shuffle 1 Poison into Combat deck.
 
-### Dire Wolf
+#### Dire Wolf
 | Health | Resistances | Vulnerabilities |
 | ------ | ----------- | --------------- |
 | 10     |             | Lightning       |
